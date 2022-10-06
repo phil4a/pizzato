@@ -1,0 +1,34 @@
+%ic {
+	font-family: 'icons';
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+[class*='_icon-'] {
+	&:before {
+		@extend %ic;
+		display: block;
+	}
+}
+._icon-zone:before {
+	content: '\e900';
+}
+._icon-cart:before {
+	content: '\e901';
+}
+._icon-close:before {
+	content: '\e902';
+}
+._icon-cross:before {
+	content: '\e903';
+}
+._icon-key:before {
+	content: '\e904';
+}
+._icon-vk:before {
+	content: '\e905';
+}
