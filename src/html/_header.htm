@@ -27,7 +27,7 @@
 			<a href="#" class="main-header__logo">
 				<img src="@img/logo.svg" alt="логотип pizzato" />
 			</a>
-			<div class="main-header__menu menu">
+			<div data-da=".sticky-menu, 1199.98" class="main-header__menu menu">
 				<nav class="menu__body">
 					<ul class="menu__list">
 						<li class="menu__item">
@@ -49,7 +49,19 @@
 				</nav>
 			</div>
 			<div class="main-header__actions actions">
-				<a href="#" class="actions__phone">8-800-222-78-81 </a>
+				<a href="#" class="actions__phone">
+					<svg
+						viewBox="0 0 256 40"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							d="M247.172 8.22191C192.26 -2.71809 74.9047 -2.97857 11.4239 8.8731L0 26.9762L17.0061 40C62.572 31.795 177.85 28.2786 240.162 38.0464L256 26.9762L247.172 8.22191Z"
+							fill="#F04E3E"
+						/>
+					</svg>
+					<p>8-800-222-78-81</p>
+				</a>
 				<a href="#" class="actions__cabinet cabinet">
 					<div class="cabinet__icon _icon-key">
 						<svg
@@ -85,7 +97,7 @@
 					</div>
 					<p class="cabinet__text">Войти</p>
 				</a>
-				<a href="#" class="actions__cart cart">
+				<a data-da=".sticky-cart, 1199.98" href="#" class="actions__cart cart">
 					<div class="cart__icon _icon-cart">
 						<svg
 							class="cart__el1"
@@ -137,7 +149,21 @@
 					</div>
 					<p class="cart__total-price">0 руб.</p>
 				</a>
+				<div class="header__menu burger-menu">
+					<div class="burger-menu__bg">
+						<button type="button" class="burger-menu icon-menu">
+							<span></span>
+						</button>
+					</div>
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item"><a href="" class="menu__link"></a></li>
+						</ul>
+					</nav>
+				</div>
 			</div>
 		</div>
+		<div class="sticky-menu"></div>
+		<div class="sticky-cart"></div>
 	</div>
 </header>
