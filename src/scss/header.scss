@@ -1,7 +1,12 @@
 //====================================================================================================
 .top-header {
-	background-color: $greenColor;
-	color: #fff;
+	display: none;
+	@media (min-width: $tablet) {
+		display: flex;
+		background-color: $greenColor;
+		color: #fff;
+	}
+
 	&__container {
 		padding-top: rem(7);
 		padding-bottom: rem(7);
@@ -30,7 +35,11 @@
 
 	&__list {
 		display: flex;
+		flex-direction: column;
 		gap: rem(45);
+		@media (min-width: $tablet) {
+			flex-direction: row;
+		}
 	}
 
 	&__item {
@@ -153,7 +162,7 @@
 		width: rem(40);
 		height: rem(40);
 		position: relative;
-		background-image: url(@img/cart-mobile-bg.svg);
+		background-image: url(@img/cabinet-mobile-bg.svg);
 		@media (min-width: $tablet) {
 			width: rem(56);
 			height: rem(56);
@@ -236,6 +245,7 @@
 		box-shadow: 0px 0px 20px 5px rgb(66 21 111 / 18%);
 		border-radius: 50%;
 		@media (min-width: $tablet) {
+			box-shadow: none;
 			width: rem(56);
 			height: rem(56);
 			background-image: url(@img/actions-bg.svg);
@@ -312,7 +322,7 @@
 		opacity: 0;
 	}
 }
-.menu {
+.nav {
 	&__body {
 		padding: 0 rem(15);
 	}
@@ -340,7 +350,7 @@
 	}
 }
 .sticky-menu {
-	.menu {
+	.nav {
 		&__body {
 			padding: 0;
 		}
@@ -359,22 +369,49 @@
 
 //Burger
 
-.burger-menu {
+.menu {
 	@media (min-width: $tablet) {
 		display: none;
 	}
-
-	&__bg {
+	&__button-wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		z-index: 10;
 		background-color: $greenColor;
 		border-radius: 50%;
-		width: 40px;
+		width: rem(40);
+		height: rem(40);
+	}
+	&__bg {
+		z-index: 10;
+		background-color: $greenColor;
+		border-radius: 50%;
+		width: rem(40);
 		height: rem(40);
 		display: flex;
 		align-items: center;
 		justify-content: center;
 	}
-}
-.icon-menu {
+	&__body {
+		@media (max-width: $tablet) {
+			display: block;
+			position: fixed;
+			top: 0;
+			right: -100%;
+			background-color: #ffeda9;
+			width: auto;
+			height: auto;
+			z-index: 5;
+			transition: right 0.3s ease 0s;
+			.menu-open & {
+				right: 0;
+			}
+		}
+		@media (max-width: $mobile) {
+			width: 100%;
+		}
+	}
 }
 
 .icon-menu {
@@ -385,7 +422,7 @@
 		width: rem(26);
 		height: rem(18);
 		cursor: pointer;
-		z-index: 5;
+		z-index: 10;
 		span,
 		&::before,
 		&::after {

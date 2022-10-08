@@ -3,7 +3,7 @@
 		<div class="top-header__city-selector">
 			Доставка пиццы <a href="#" class="top-header__city">Новосибирск</a>
 		</div>
-		<div class="top-header__nav">
+		<div data-da=".menu__body, 1199.98, 0" class="top-header__nav">
 			<ul class="top-header__list">
 				<li class="top-header__item">
 					<a href="#" class="top-header__link">Доставка и оплата</a>
@@ -16,7 +16,7 @@
 				</li>
 			</ul>
 		</div>
-		<div class="top-header__pizza-counter">
+		<div data-da=".menu__body, 1199.98, 2" class="top-header__pizza-counter">
 			Уже приготовлено <span class="top-header__pizza">123 446</span> пицц
 		</div>
 	</div>
@@ -27,29 +27,29 @@
 			<a href="#" class="main-header__logo">
 				<img src="@img/logo.svg" alt="логотип pizzato" />
 			</a>
-			<div data-da=".sticky-menu, 1199.98" class="main-header__menu menu">
-				<nav class="menu__body">
-					<ul class="menu__list">
-						<li class="menu__item">
-							<a href="#" class="menu__link">Римская</a>
+			<div data-da=".sticky-menu, 1199.98" class="main-header__nav nav">
+				<nav class="nav__body">
+					<ul class="nav__list">
+						<li class="nav__item">
+							<a href="#" class="nav__link">Римская</a>
 						</li>
-						<li class="menu__item">
-							<a href="#" class="menu__link">Неаполитанская</a>
+						<li class="nav__item">
+							<a href="#" class="nav__link">Неаполитанская</a>
 						</li>
-						<li class="menu__item">
-							<a href="#" class="menu__link">Десерты</a>
+						<li class="nav__item">
+							<a href="#" class="nav__link">Десерты</a>
 						</li>
-						<li class="menu__item">
-							<a href="#" class="menu__link">Закуски</a>
+						<li class="nav__item">
+							<a href="#" class="nav__link">Закуски</a>
 						</li>
-						<li class="menu__item">
-							<a href="#" class="menu__link">Напитки</a>
+						<li class="nav__item">
+							<a href="#" class="nav__link">Напитки</a>
 						</li>
 					</ul>
 				</nav>
 			</div>
 			<div class="main-header__actions actions">
-				<a href="#" class="actions__phone">
+				<a data-da=".menu__body, 1199.98, 1" href="#" class="actions__phone">
 					<svg
 						viewBox="0 0 256 40"
 						fill="none"
@@ -149,11 +149,13 @@
 					</div>
 					<p class="cart__total-price">0 руб.</p>
 				</a>
-				<div class="header__menu burger-menu">
-					<div class="burger-menu__bg">
-						<button type="button" class="burger-menu icon-menu">
-							<span></span>
-						</button>
+				<div class="header__menu menu">
+					<div class="menu__button-wrapper">
+						<div class="menu__bg">
+							<button type="button" class="menu__icon icon-menu">
+								<span></span>
+							</button>
+						</div>
 					</div>
 					<nav class="menu__body">
 						<ul class="menu__list">
