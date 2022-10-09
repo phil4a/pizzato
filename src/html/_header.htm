@@ -3,7 +3,7 @@
 		<div class="top-header__city-selector">
 			Доставка пиццы <a href="#" class="top-header__city">Новосибирск</a>
 		</div>
-		<div data-da=".menu__body, 1199.98, 0" class="top-header__nav">
+		<div class="top-header__nav">
 			<ul class="top-header__list">
 				<li class="top-header__item">
 					<a href="#" class="top-header__link">Доставка и оплата</a>
@@ -49,7 +49,11 @@
 				</nav>
 			</div>
 			<div class="main-header__actions actions">
-				<a data-da=".menu__body, 1199.98, 1" href="#" class="actions__phone">
+				<a
+					data-da=".menu__body, 1199.98, 1"
+					href="tel:8-800-222-78-81"
+					class="actions__phone"
+				>
 					<svg
 						viewBox="0 0 256 40"
 						fill="none"
@@ -57,7 +61,6 @@
 					>
 						<path
 							d="M247.172 8.22191C192.26 -2.71809 74.9047 -2.97857 11.4239 8.8731L0 26.9762L17.0061 40C62.572 31.795 177.85 28.2786 240.162 38.0464L256 26.9762L247.172 8.22191Z"
-							fill="#F04E3E"
 						/>
 					</svg>
 					<p>8-800-222-78-81</p>
@@ -159,7 +162,30 @@
 					</div>
 					<nav class="menu__body">
 						<ul class="menu__list">
-							<li class="menu__item"><a href="" class="menu__link"></a></li>
+							<img src="@img/menu-logo.svg" class="menu__logo" alt="" />
+							<a href="#" class="menu__cabinet cabinet-menu">
+								<img
+									src="@img/cabinet-menu.svg"
+									class="cabinet-menu__icon"
+									alt=""
+								/>
+								<div class="cabinet-menu__button">Войти в личный кабинет</div>
+							</a>
+							<li class="menu__item">
+								<a href="#" class="menu__link">Акции</a>
+							</li>
+							<li class="menu__item">
+								<a href="#" class="menu__link">Доставка и оплата </a>
+							</li>
+							<li class="menu__item">
+								<a href="#" class="menu__link">Контакты</a>
+							</li>
+							<li class="menu__item">
+								<a href="#" class="menu__link">Бонусная программа</a>
+							</li>
+							<li class="menu__item">
+								<a href="#" class="menu__link">Вакансии</a>
+							</li>
 						</ul>
 					</nav>
 				</div>
