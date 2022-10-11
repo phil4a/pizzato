@@ -13,3 +13,128 @@
 		text-transform: uppercase;
 	}
 }
+._catalog-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(rem(290), 1fr));
+	grid-auto-rows: auto;
+	gap: 0;
+	justify-content: space-between;
+	background-color: #fff;
+	@media (min-width: $mobileSmall) {
+		background-color: transparent;
+		gap: rem(25);
+	}
+}
+.card {
+	display: flex;
+	flex-direction: row;
+	background-color: #fff;
+	margin: rem(14) 0;
+	@media (min-width: $mobileSmall) {
+		flex-direction: column;
+		margin: 0;
+	}
+	&__image {
+		position: relative;
+		flex: 1 0 50%;
+		@media (min-width: $mobileSmall) {
+			flex: 0 0 auto;
+		}
+	}
+
+	&__thumb {
+		width: 100%;
+		position: relative;
+	}
+
+	&__icon {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 30%;
+		@media (min-width: $mobileSmall) {
+		}
+	}
+
+	&__info {
+		justify-content: flex-start;
+		display: flex;
+		flex-direction: column;
+		padding: rem(5) rem(5) 0 rem(6);
+		@media (min-width: $mobileSmall) {
+			padding: rem(32) rem(20) rem(20) rem(22);
+		}
+	}
+
+	&__top-line {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__title {
+		font-weight: 600;
+		font-size: rem(12);
+		@media (min-width: $mobileSmall) {
+			font-size: rem(16);
+		}
+	}
+
+	&__info-button {
+		display: none;
+		@media (min-width: $mobileSmall) {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 50%;
+			height: rem(21);
+			width: rem(21);
+			background-color: rgba(240, 78, 62, 0.2);
+			font-family: $tt;
+			color: #fff;
+			font-weight: 800;
+			font-size: rem(14);
+		}
+	}
+
+	&__description {
+		margin: rem(15) 0;
+		font-size: rem(10);
+		line-height: math.div(12, 10);
+		@media (min-width: $mobileSmall) {
+			font-size: rem(12);
+			line-height: math.div(15, 12);
+		}
+	}
+
+	&__bot-line {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__price {
+		font-weight: 800;
+		font-size: rem(12);
+		@media (min-width: $mobileSmall) {
+			font-size: rem(20);
+		}
+	}
+
+	&__button {
+	}
+}
+
+.button {
+	padding: rem(8) rem(16);
+	font-weight: 800;
+	font-size: rem(10);
+	text-transform: uppercase;
+	border-radius: rem(5);
+	color: #fff;
+	background-color: $redColor;
+	@media (min-width: $mobileSmall) {
+		padding: rem(12) rem(22);
+		font-size: rem(16);
+	}
+}
