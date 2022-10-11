@@ -81,6 +81,7 @@
 	}
 }
 .header {
+	background-color: #fff;
 	&__container {
 	}
 
@@ -92,6 +93,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+
 	&__logo {
 		flex-grow: 0;
 		flex-shrink: 0;
@@ -136,7 +138,7 @@
 			}
 		}
 		@media (max-width: $tablet) {
-			margin-bottom: rem(50);
+			margin-bottom: rem(70);
 			svg {
 				path {
 					fill: $greenColor;
@@ -370,6 +372,8 @@
 		font-weight: 800;
 		font-size: rem(14);
 		line-height: math.div(17, 14);
+		font-family: 'Montserrat';
+		text-transform: uppercase;
 	}
 
 	&__link {
@@ -388,7 +392,7 @@
 			padding: 0;
 		}
 		&__list {
-			padding-bottom: 10px;
+			padding: rem(10) 0;
 			overflow-x: auto;
 		}
 		&__item {
