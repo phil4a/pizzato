@@ -9,7 +9,6 @@ import 'tippy.js/dist/tippy.css'; // optional for styling
 import 'tippy.js/animations/shift-away.css';
 
 //tooltip
-
 tippy('.card__tip-button', {
 	theme: 'pizzato',
 	placement: 'bottom-end',
