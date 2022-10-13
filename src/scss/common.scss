@@ -31,12 +31,13 @@
 	background-color: #fff;
 	margin: rem(14) 0;
 	@media (min-width: $mobileSmall) {
+		margin: 0;
 		flex-direction: column;
 		justify-content: space-between;
 	}
 	&__image {
 		position: relative;
-		flex: 1 0 50%;
+		flex: 0 0 50%;
 		@media (min-width: $mobileSmall) {
 			flex: 0 1 auto;
 		}
@@ -78,9 +79,10 @@
 		}
 	}
 
-	&__info-button {
+	&__tip-button {
 		display: none;
 		@media (min-width: $mobileSmall) {
+			flex-shrink: 0;
 			display: flex;
 			align-items: center;
 			justify-content: center;
@@ -92,6 +94,13 @@
 			color: #fff;
 			font-weight: 800;
 			font-size: rem(14);
+			cursor: default;
+			transition: all 0.3s ease 0s;
+			@media (any-hover: hover) {
+				&:hover {
+					background-color: rgba(240, 77, 62, 0.558);
+				}
+			}
 		}
 	}
 
@@ -105,6 +114,8 @@
 			font-size: rem(12);
 			line-height: math.div(15, 12);
 		}
+	}
+	&__tip {
 	}
 
 	&__bot-line {
@@ -136,5 +147,30 @@
 	@media (min-width: $mobileSmall) {
 		padding: rem(12) rem(22);
 		font-size: rem(16);
+	}
+}
+
+//tippy customize
+.tippy-box[data-theme~='pizzato'] {
+	background-color: #ffeda9;
+	color: #000;
+}
+
+.tip-template {
+	max-width: rem(280);
+	background-color: #ffeda9;
+	padding: rem(12) rem(8);
+	font-size: rem(12);
+	line-height: math.div(14, 12);
+	&[data-inertia][data-state='visible'] {
+		transition-timing-function: cubic-bezier(0.29, 1.01, 1, -0.68);
+	}
+	&__ingredients {
+	}
+
+	&__nutrition {
+	}
+
+	&__description {
 	}
 }
