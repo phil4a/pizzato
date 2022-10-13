@@ -74,6 +74,7 @@ body {
 	// Прижимаем footer
 	> main {
 		flex: 1 1 auto;
+		margin-top: rem(120);
 	}
 	// Фикс для слайдеров
 	> * {
