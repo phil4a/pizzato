@@ -84,6 +84,7 @@
 .header {
 	position: absolute;
 	z-index: 4;
+
 	width: 100%;
 	background-color: #fff;
 	top: 0;
@@ -99,16 +100,43 @@
 	}
 	&._header-scroll {
 		position: fixed;
-		width: 100%;
-		top: -100px;
+		min-width: 100%;
+		top: 0;
 		opacity: 0;
+
 		.main-header {
 			padding: rem(5) 0;
+		}
+		.cabinet__text,
+		.cart__total-price {
+			display: none;
+		}
+		@media (min-width: $tablet) {
+			.cabinet__icon,
+			.cart__icon {
+				width: rem(45);
+				height: rem(45);
+			}
+			.cabinet__icon:before,
+			.cart__icon:before {
+				font-size: rem(26);
+			}
+			.main-header__logo {
+				img {
+					width: 160px;
+				}
+			}
+			.cart__amount {
+				width: rem(16);
+				height: rem(16);
+				right: rem(-5);
+				top: rem(-2);
+				font-size: rem(12);
+			}
 		}
 	}
 	&._header-show {
 		transition: all 0.2s ease 0s;
-		top: 0;
 		opacity: 1;
 	}
 }
@@ -118,12 +146,13 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	transition: padding 0.1s ease 0s;
+	transition: all 0.2s ease 0s;
 	&__logo {
 		flex-grow: 0;
 		flex-shrink: 0;
 		@include adaptiveValue('flex-basis', 240, 170, 1280, 320);
 		img {
+			transition: all 0.3s ease 0s;
 			@include adaptiveValue('width', 220, 170, 1280, 320);
 			// height: 100%;
 		}
@@ -222,7 +251,9 @@
 		width: rem(40);
 		height: rem(40);
 		position: relative;
+		background-size: cover;
 		background-image: url(@img/cabinet-mobile-bg.svg);
+		transition: all 0.3s ease 0s;
 		@media (min-width: $tablet) {
 			width: rem(56);
 			height: rem(56);
@@ -249,6 +280,7 @@
 		display: none;
 		font-size: rem(10);
 		margin-top: rem(5);
+		transition: all 0.3s ease 0s;
 		@media (min-width: $tablet) {
 			display: flex;
 		}
@@ -305,6 +337,7 @@
 		background-image: url(@img/cart-mobile-bg.svg);
 		box-shadow: 0px 0px 15px 5px #fdc20053;
 		border-radius: 50%;
+		transition: all 0.3s ease 0s;
 		@media (min-width: $tablet) {
 			box-shadow: none;
 			width: rem(56);
@@ -341,7 +374,7 @@
 		width: rem(16);
 		height: rem(16);
 		color: $yellowColor;
-		transition: color 0.3s ease 0s;
+		transition: all 0.3s ease 0s;
 		@media (min-width: $tablet) {
 			right: rem(-9);
 			top: rem(-6);

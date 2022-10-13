@@ -68,6 +68,7 @@
 
 	&__top-line {
 		display: flex;
+		gap: rem(25);
 		justify-content: space-between;
 		align-items: center;
 	}
