@@ -2,15 +2,16 @@
 .title {
 	font-family: $tt;
 	font-weight: 800;
-	font-size: rem(12);
+	font-size: rem(18);
 	text-align: center;
+	text-transform: uppercase;
+	margin-bottom: rem(15);
 	@media (min-width: $tablet) {
 		text-align: left;
 		margin-bottom: rem(10);
 		font-size: rem(24);
 		line-height: 34px;
 		line-height: math.div(34, 24);
-		text-transform: uppercase;
 	}
 }
 ._catalog-grid {

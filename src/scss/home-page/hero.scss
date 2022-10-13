@@ -1,6 +1,7 @@
 .hero {
 	position: relative;
 	margin-bottom: rem(30);
+	margin-top: rem(15);
 	@media (max-width: $tablet) {
 		margin: 0 rem(-15) rem(30) rem(-15);
 	}
