@@ -133,6 +133,13 @@
 				top: rem(-2);
 				font-size: rem(12);
 			}
+			.cabinet__el1,
+			.cabinet__el2,
+			.cart__el1,
+			.cart__el2,
+			.cart__el3 {
+				display: none;
+			}
 		}
 	}
 	&._header-show {
