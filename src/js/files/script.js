@@ -17,6 +17,7 @@ tippy('.card__tip-button', {
 	animateFill: true,
 	plugins: [animateFill],
 	inertia: true,
+	zIndex: 1,
 	content: function (reference) {
 		return reference.querySelector('.tip-template');
 	},

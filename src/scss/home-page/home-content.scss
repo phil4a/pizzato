@@ -4,8 +4,14 @@
 
 	&__hit {
 	}
+	&__combo {
+	}
 }
 .hit {
+	margin-bottom: rem(40);
+	@media (min-width: $tablet) {
+		margin-bottom: rem(70);
+	}
 	&__title {
 	}
 
@@ -16,5 +22,7 @@
 	}
 
 	&__item {
+	}
+	.link-more {
 	}
 }

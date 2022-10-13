@@ -21,6 +21,7 @@
 	gap: 0;
 	justify-content: space-between;
 	background-color: #fff;
+	margin-bottom: rem(15);
 	@media (min-width: $mobileSmall) {
 		background-color: transparent;
 		gap: rem(25);
@@ -149,6 +150,22 @@
 	@media (min-width: $mobileSmall) {
 		padding: rem(12) rem(22);
 		font-size: rem(16);
+	}
+}
+.link-more {
+	position: relative;
+	font-family: $tt;
+	font-size: rem(16);
+	color: #ffffff;
+	text-transform: uppercase;
+	svg {
+		width: rem(108);
+	}
+	p {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translate(-50%, -60%);
 	}
 }
 
