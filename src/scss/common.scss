@@ -183,12 +183,29 @@
 	text-transform: uppercase;
 	svg {
 		width: rem(108);
+		path {
+			transition: fill 0.3s ease 0s;
+			fill: $greenColor;
+		}
 	}
 	p {
 		position: absolute;
 		top: 0;
 		left: 50%;
 		transform: translate(-50%, -60%);
+		transition: color 0.3s ease 0s;
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			svg {
+				path {
+					fill: $redColor;
+				}
+			}
+			p {
+				color: $yellowColor;
+			}
+		}
 	}
 }
 
