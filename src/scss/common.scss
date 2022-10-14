@@ -42,6 +42,16 @@
 		flex: 0 0 50%;
 		@media (min-width: $mobileSmall) {
 			flex: 0 1 auto;
+			@media (any-hover: hover) {
+				&:hover {
+					img {
+						filter: brightness(110%);
+					}
+				}
+			}
+		}
+		img {
+			transition: all 0.3s ease 0s;
 		}
 	}
 
@@ -77,8 +87,14 @@
 	&__title {
 		font-weight: 600;
 		font-size: rem(12);
+		transition: all 0.3s ease 0s;
 		@media (min-width: $mobileSmall) {
 			font-size: rem(16);
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: $redColor;
+			}
 		}
 	}
 
@@ -147,9 +163,16 @@
 	border-radius: rem(5);
 	color: #fff;
 	background-color: $redColor;
+	transition: all 0.3s ease 0s;
 	@media (min-width: $mobileSmall) {
 		padding: rem(12) rem(22);
 		font-size: rem(16);
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: $yellowColor;
+			color: rgb(255, 255, 255);
+		}
 	}
 }
 .link-more {
