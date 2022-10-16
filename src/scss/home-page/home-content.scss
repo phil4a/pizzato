@@ -6,6 +6,12 @@
 	}
 	&__combo {
 	}
+	&__roma {
+	}
+	&__neapol {
+	}
+	&__map {
+	}
 }
 .hit {
 	margin-bottom: rem(40);
@@ -25,4 +31,136 @@
 	}
 	.link-more {
 	}
+}
+.combo {
+	margin-bottom: rem(40);
+	@media (min-width: $tablet) {
+		margin-bottom: rem(70);
+	}
+	&__title {
+	}
+
+	&__body {
+	}
+
+	&__items {
+	}
+
+	&__item {
+	}
+	.link-more {
+	}
+}
+
+.roma {
+	margin-bottom: rem(40);
+	@media (min-width: $tablet) {
+		margin-bottom: rem(70);
+	}
+	&__title {
+	}
+
+	&__body {
+	}
+
+	&__items {
+	}
+
+	&__item {
+	}
+	.link-more {
+	}
+}
+.neapol {
+	margin-bottom: rem(40);
+	@media (min-width: $tablet) {
+		margin-bottom: rem(70);
+	}
+	&__title {
+	}
+
+	&__body {
+	}
+
+	&__items {
+	}
+
+	&__item {
+	}
+	.link-more {
+	}
+}
+
+.delivery-map {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	gap: rem(45);
+	padding: rem(33);
+	background-image: url(@img/home-page/map-bg.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	&__info {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__map {
+		width: 100%;
+	}
+}
+.info-delivery {
+	&__title {
+		font-family: $tt;
+		font-weight: 800;
+		font-size: rem(26);
+		color: $greenColor;
+		margin-bottom: rem(30);
+	}
+
+	&__form {
+		margin-bottom: rem(20);
+	}
+
+	&__zones {
+	}
+
+	&__zone {
+	}
+
+	&__img {
+		&_green,
+		&_yellow,
+		&_blue,
+		&_red {
+			&:before {
+				font-size: rem(54);
+				opacity: 0.7;
+			}
+		}
+		&_green {
+			color: #42ff00;
+		}
+
+		&_yellow {
+			color: #faff00;
+		}
+
+		&_blue {
+			color: #0500ff;
+		}
+
+		&_red {
+			color: #ff0000;
+		}
+	}
+
+	&__areas {
+	}
+
+	&__subtitle {
+	}
+}
+
+.map-delivery {
 }

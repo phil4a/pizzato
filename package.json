@@ -46,6 +46,7 @@
 		"gulp-zip": "latest",
 		"html-webpack-plugin": "latest",
 		"inputmask": "latest",
+		"leaflet": "^1.9.2",
 		"lightgallery": "latest",
 		"load-plugins": "latest",
 		"mini-css-extract-plugin": "2.4.7",

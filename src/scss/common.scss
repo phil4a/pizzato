@@ -199,11 +199,11 @@
 		&:hover {
 			svg {
 				path {
-					fill: $redColor;
+					fill: $yellowColor;
 				}
 			}
 			p {
-				color: $yellowColor;
+				color: $redColor;
 			}
 		}
 	}
@@ -232,4 +232,9 @@
 
 	&__description {
 	}
+}
+
+//delete leaflet copyrights
+.leaflet-right {
+	display: none;
 }
