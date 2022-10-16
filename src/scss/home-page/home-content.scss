@@ -119,13 +119,35 @@
 	}
 
 	&__form {
+		display: flex;
+		flex-direction: column;
 		margin-bottom: rem(20);
+		align-items: start;
+		gap: rem(10);
+	}
+	&__input {
+		width: 100%;
+		padding: rem(10) rem(13);
+	}
+	&__btn {
 	}
 
 	&__zones {
+		display: flex;
+		align-items: start;
+		flex-direction: column;
+		gap: rem(30);
+		h3 {
+			font-weight: 700;
+		}
 	}
 
 	&__zone {
+		display: flex;
+		align-items: center;
+		gap: rem(30);
+		font-size: rem(12);
+		line-height: math.div(15, 12);
 	}
 
 	&__img {

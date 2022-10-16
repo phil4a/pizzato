@@ -6,6 +6,7 @@
 	text-align: center;
 	text-transform: uppercase;
 	margin-bottom: rem(15);
+	color: $greenColor;
 	@media (min-width: $tablet) {
 		text-align: left;
 		margin-bottom: rem(10);
@@ -232,9 +233,4 @@
 
 	&__description {
 	}
-}
-
-//delete leaflet copyrights
-.leaflet-right {
-	display: none;
 }

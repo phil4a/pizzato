@@ -838,7 +838,19 @@
 		<div class="content__map delivery-map">
 			<div class="delivery-map__info info-delivery">
 				<h2 class="info-delivery__title">Карта доставки</h2>
-				<div class="info-delivery__form">форма</div>
+				<h3>Уточнить адрес доставки</h3>
+				<form class="info-delivery__form">
+					<input
+						type="text"
+						name="form[]"
+						placeholder="Введите адрес"
+						class="info-delivery__input"
+						id="info-delivery__input"
+					/>
+					<button type="submit" class="info-delivery__btn button">
+						Узнать
+					</button>
+				</form>
 				<ul class="info-delivery__zones">
 					<li class="info-delivery__zone">
 						<p class="info-delivery__img_green _icon-zone"></p>
