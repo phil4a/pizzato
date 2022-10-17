@@ -113,7 +113,7 @@ function initMap() {
 		}
 	}
 	$.ajax({
-		url: 'deliv2.geojson',
+		url: 'https://raw.githubusercontent.com/phil4a/pizzato/master/deliv2.geojson',
 		dataType: 'json',
 		success: onZonesLoad,
 	});
