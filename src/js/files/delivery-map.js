@@ -1,3 +1,5 @@
+import $ from 'jquery';
+
 // import 'leaflet/dist/leaflet.css';
 // import 'leaflet';
 
@@ -15,11 +17,11 @@
 
 const deliveryForm = document.querySelector('.info-delivery__form');
 const inputAddress = document.querySelector('.info-delivery__input');
-const nskCoords = [54.981798, 83.007095];
+const nskCoords = [83.007095, 54.981798];
 const zoomLevel = 10;
-//Url KML-файла объектов карты
-const mapObjLink =
-	'https://raw.githubusercontent.com/phil4a/pizzato/master/src/delivery.kml';
+//Url KML-файла объектов карт
+
+//! GEOJSON (местами меняется lat и long, параметром запроса api coordorder)
 
 ymaps.ready(initMap);
 
@@ -33,21 +35,24 @@ function initMap() {
 	const deliveryPoint = new ymaps.GeoObject(
 		{
 			geometry: { type: 'Point' },
-			properties: { iconCaption: 'Адрес' },
+			properties: {},
 		},
 		{
 			preset: 'islands#blackDotIconWithCaption',
-			draggable: true,
-			iconCaptionMaxWidth: '215',
 		}
 	);
 
-	//Отрисовываем полигоны зоны доставки
-	let dataDelivery = ymaps.geoXml.load(mapObjLink);
+	//создаем метку адреса
+	myMap.geoObjects.add(deliveryPoint);
+
+	//Получаем полигоны зоны доставки
+
 	//прикрепляем поиск к input
 	let suggestView = new ymaps.SuggestView('info-delivery__input');
-	dataDelivery.then(function (res) {
-		let deliveryZones = ymaps.geoQuery(res.geoObjects).addToMap(myMap);
+	//Добавляем зоны доставки на карту
+	function onZonesLoad(json) {
+		const deliveryZones = ymaps.geoQuery(json).addToMap(myMap);
+		console.log(deliveryZones);
 		deliveryZones.each(function (obj) {
 			obj.options.set({
 				fillColor: obj.properties.get('fill'),
@@ -64,26 +69,52 @@ function initMap() {
 			let inputRequest = inputAddress.value;
 			addressGeocode(inputRequest);
 		});
-		//Геокодируем и размещаем метку
+		//Геокодируем координаты адреса
 		function addressGeocode(inputRequest) {
 			ymaps.geocode(inputRequest).then(function (res) {
 				let obj = res.geoObjects.get(0);
 				let coords = obj.geometry.getCoordinates();
 
 				let bounds = obj.properties.get('boundedBy');
-				obj.options.set('preset', 'islands#darkBlueDotIconWithCaption');
-				obj.properties.set('iconCaption', obj.getAddressLine());
-				myMap.geoObjects.add(obj);
-				myMap.setBounds(bounds, {
-					// Проверяем наличие тайлов на данном масштабе.
-					checkZoomRange: true,
-				});
-				const polygon = deliveryZones.searchContaining(coords).get(0);
+				// obj.options.set('preset', 'islands#darkBlueDotIconWithCaption');
+				// obj.properties.set('iconCaption', obj.getAddressLine());
+				// myMap.geoObjects.add(obj);
+				// myMap.setBounds(bounds, {
+				// 	// Проверяем наличие тайлов на данном масштабе.
+				// 	checkZoomRange: true,
+				// });
+				let polygon = deliveryZones.searchContaining(coords).get(0);
+
 				if (polygon) {
-					deliveryZones.setOptions('fillOpacity', 0.4);
+					deliveryZones.setOptions('fillOpacity', 0.2);
+					deliveryZones.setOptions('strokeWidth', 3);
 					polygon.options.set('fillOpacity', 0.8);
+					polygon.options.set('strokeWidth', 10);
+
+					deliveryPoint.geometry.setCoordinates(coords);
+					deliveryPoint.options.set(
+						'iconColor',
+						polygon.properties.get('fill')
+					);
+					myMap.setBounds(bounds, {
+						// Проверяем наличие тайлов на данном масштабе.
+						checkZoomRange: true,
+					});
+				} else {
+					deliveryZones.setOptions('fillOpacity', 0.4);
+					deliveryPoint.geometry.setCoordinates(coords);
+					deliveryPoint.properties.set({
+						iconCaption: 'Уточните у оператора',
+					});
+					// Перекрашиваем метку в чёрный цвет.
+					deliveryPoint.options.set('iconColor', 'black');
 				}
 			});
 		}
+	}
+	$.ajax({
+		url: 'deliv2.geojson',
+		dataType: 'json',
+		success: onZonesLoad,
 	});
 }
