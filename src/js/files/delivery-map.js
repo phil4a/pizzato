@@ -24,27 +24,66 @@ const mapObjLink =
 ymaps.ready(initMap);
 
 function initMap() {
-	//прикрепляем поиск к input
-	let suggestView = new ymaps.SuggestView('info-delivery__input');
 	// Создание карты.
 	const myMap = new ymaps.Map('map-delivery', {
 		center: nskCoords,
 		zoom: zoomLevel,
 		controls: [],
 	});
-	deliveryForm.addEventListener('submit', function (e) {
-		e.preventDefault();
-		let inputRequest = inputAddress.value;
-		ymaps.geocode(inputRequest).then(function (res) {
-			let obj = res.geoObjects.get(0).geometry.getCoordinates();
-			console.log(obj);
-			let newPlacemark = new ymaps.Placemark(obj);
-			myMap.geoObjects.add(newPlacemark);
-		});
-	});
+	const deliveryPoint = new ymaps.GeoObject(
+		{
+			geometry: { type: 'Point' },
+			properties: { iconCaption: 'Адрес' },
+		},
+		{
+			preset: 'islands#blackDotIconWithCaption',
+			draggable: true,
+			iconCaptionMaxWidth: '215',
+		}
+	);
+
 	//Отрисовываем полигоны зоны доставки
 	let dataDelivery = ymaps.geoXml.load(mapObjLink);
+	//прикрепляем поиск к input
+	let suggestView = new ymaps.SuggestView('info-delivery__input');
 	dataDelivery.then(function (res) {
-		myMap.geoObjects.add(res.geoObjects);
+		let deliveryZones = ymaps.geoQuery(res.geoObjects).addToMap(myMap);
+		deliveryZones.each(function (obj) {
+			obj.options.set({
+				fillColor: obj.properties.get('fill'),
+				fillOpacity: obj.properties.get('fill-opacity'),
+				strokeColor: obj.properties.get('stroke'),
+				strokeWidth: obj.properties.get('stroke-width'),
+				strokeOpacity: obj.properties.get('stroke-opacity'),
+			});
+			obj.properties.set('balloonContent', obj.properties.get('description'));
+		});
+		//Событие заполнение формы
+		deliveryForm.addEventListener('submit', function (e) {
+			e.preventDefault();
+			let inputRequest = inputAddress.value;
+			addressGeocode(inputRequest);
+		});
+		//Геокодируем и размещаем метку
+		function addressGeocode(inputRequest) {
+			ymaps.geocode(inputRequest).then(function (res) {
+				let obj = res.geoObjects.get(0);
+				let coords = obj.geometry.getCoordinates();
+
+				let bounds = obj.properties.get('boundedBy');
+				obj.options.set('preset', 'islands#darkBlueDotIconWithCaption');
+				obj.properties.set('iconCaption', obj.getAddressLine());
+				myMap.geoObjects.add(obj);
+				myMap.setBounds(bounds, {
+					// Проверяем наличие тайлов на данном масштабе.
+					checkZoomRange: true,
+				});
+				const polygon = deliveryZones.searchContaining(coords).get(0);
+				if (polygon) {
+					deliveryZones.setOptions('fillOpacity', 0.4);
+					polygon.options.set('fillOpacity', 0.8);
+				}
+			});
+		}
 	});
 }
