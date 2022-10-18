@@ -21,7 +21,7 @@ const nskCoords = [83.007095, 54.981798];
 const zoomLevel = 10;
 //Url KML-файла объектов карт
 
-//! GEOJSON (местами меняется lat и long, параметром запроса api coordorder)
+//! GEOJSON (lat и long меняется местами, параметром запроса api coordorder)
 
 ymaps.ready(initMap);
 
