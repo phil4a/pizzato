@@ -124,6 +124,7 @@
 				font-size: rem(26);
 			}
 			.main-header__logo {
+				flex-basis: rem(180);
 				img {
 					width: 160px;
 				}
@@ -167,8 +168,8 @@
 		}
 	}
 
-	&__menu {
-		flex: 1 0 auto;
+	&__nav {
+		flex: 0 1 auto;
 	}
 
 	&__actions {
@@ -432,7 +433,12 @@
 
 	&__list {
 		display: flex;
-		gap: rem(29);
+		flex-wrap: nowrap;
+		column-gap: rem(29);
+		@media (min-width: $tablet) {
+			row-gap: rem(15);
+			flex-wrap: wrap;
+		}
 	}
 
 	&__item {
