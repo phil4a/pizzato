@@ -1,0 +1,77 @@
+<section class="delivery-content">
+	<div class="delivery-content__container">
+		<div class="delivery-content__info">
+			<h1 class="delivery-content__title title">Доставка</h1>
+			<div class="delivery-content__time">
+				<p>Прием заказов: <b>10:00-22:00</b> (без выходных)</p>
+			</div>
+			<ul class="delivery-content__rests">
+				<p>Самовывоз:</p>
+				<li class="delivery-content__item">
+					<b>Правый берег, Мичурина, 12</b> 10:30-22:00
+				</li>
+				<li class="delivery-content__item">
+					<b>Правый берег, Фрунзе, 238</b> 10:30-23:00
+				</li>
+				<li class="delivery-content__item">
+					<b>Академгородок, Иванова, 35Б</b> 10:30-22:00
+				</li>
+			</ul>
+		</div>
+		<div class="delivery-content__map delivery-map">
+			<div class="delivery-map__info info-delivery">
+				<h2 class="info-delivery__title title">Карта доставки</h2>
+				<h3>Уточнить адрес доставки</h3>
+				<form class="info-delivery__form">
+					<input
+						type="text"
+						name="form[]"
+						placeholder="Введите адрес"
+						class="info-delivery__input"
+						id="info-delivery__input"
+					/>
+					<button type="submit" class="info-delivery__btn button">
+						Узнать
+					</button>
+				</form>
+				<ul class="info-delivery__zones">
+					<li class="info-delivery__zone">
+						<p class="info-delivery__img_green _icon-zone"></p>
+						<div class="info-delivery__areas">
+							<h4 class="info-delivery__subtitle">Зона доставки 1</h4>
+							<p>Минимальная сумма заказа 500 ₽</p>
+						</div>
+					</li>
+					<li class="info-delivery__zone">
+						<p class="info-delivery__img_yellow _icon-zone"></p>
+						<div class="info-delivery__areas">
+							<h4 class="info-delivery__subtitle">Зона доставки 2</h4>
+							<p>Минимальная сумма заказа 750 ₽</p>
+						</div>
+					</li>
+					<li class="info-delivery__zone">
+						<p class="info-delivery__img_red _icon-zone"></p>
+						<div class="info-delivery__areas">
+							<h4 class="info-delivery__subtitle">Зона доставки 3</h4>
+							<p>Минимальная сумма заказа 1200 ₽</p>
+						</div>
+					</li>
+					<!-- <li class="info-delivery__zone">
+						<p class="info-delivery__img_blue _icon-zone"></p>
+						<div class="info-delivery__areas">
+							<h4 class="info-delivery__subtitle">
+								Зона доставки 4 (Платная доставка)
+							</h4>
+							<p></p>
+						</div>
+					</li> -->
+				</ul>
+			</div>
+			<div
+				data-da=".info-delivery, 1200,3"
+				class="delivery-map__map map-delivery"
+				id="map-delivery"
+			></div>
+		</div>
+	</div>
+</section>
