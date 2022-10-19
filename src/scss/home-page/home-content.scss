@@ -98,6 +98,7 @@
 		margin: 0 rem(-15) rem(30) rem(-15);
 		width: 100vw;
 	}
+	min-height: rem(500);
 	display: flex;
 	justify-content: space-between;
 	flex-direction: column;
@@ -195,7 +196,7 @@
 		}
 
 		&_yellow {
-			color: #faff00;
+			color: #cfd300;
 		}
 
 		&_blue {

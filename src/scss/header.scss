@@ -526,7 +526,7 @@
 			height: auto;
 			z-index: 5;
 			transition: right 0.3s ease 0s;
-			box-shadow: -10px 12px 38px 12px rgba(216, 216, 216, 0.2);
+			// box-shadow: -10px 12px 38px 12px rgba(216, 216, 216, 0.2);
 			.menu-open & {
 				right: 0;
 			}

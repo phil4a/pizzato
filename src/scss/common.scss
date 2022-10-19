@@ -1,4 +1,5 @@
 // Заголовки, общие БЄМ блоки и прочее...
+
 .title {
 	font-family: $tt;
 	font-weight: 800;
@@ -232,5 +233,79 @@
 	}
 
 	&__description {
+	}
+}
+
+.anim-logo {
+	z-index: 1;
+	&__spark {
+		fill: $greenColor;
+		animation: sparks 1s ease-in infinite alternate-reverse running;
+		@media (min-width: $tablet) {
+			animation: sparks 1s ease-in infinite alternate-reverse paused;
+		}
+	}
+
+	&__hand {
+		transform-origin: center;
+		animation: hand 1s ease-in infinite alternate-reverse running;
+		@media (min-width: $tablet) {
+			animation: hand 1s ease-in infinite alternate-reverse paused;
+		}
+	}
+
+	&__eyebrow {
+		animation: eyebrow 1s ease-in infinite alternate-reverse running;
+		@media (min-width: $tablet) {
+			animation: eyebrow 1s ease-in infinite alternate-reverse paused;
+		}
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			.anim-logo__spark {
+				animation-play-state: running;
+			}
+			.anim-logo__hand {
+				animation-play-state: running;
+			}
+			.anim-logo__eyebrow {
+				animation-play-state: running;
+			}
+		}
+	}
+}
+
+@keyframes sparks {
+	0% {
+		transform: translate(3px, 4px);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translate(0, 0);
+		opacity: 1;
+		fill: $redColor;
+	}
+}
+
+@keyframes hand {
+	0% {
+		transform: translateY(3px) translateX(3px) rotate(10deg);
+	}
+
+	100% {
+		transform: translateY(0) translateX(0) rotate(0);
+	}
+}
+@keyframes eyebrow {
+	0% {
+		transform: translateY(1px);
+	}
+	50% {
+		transform: translateY(1px);
+	}
+
+	100% {
+		transform: translateY(0);
 	}
 }
