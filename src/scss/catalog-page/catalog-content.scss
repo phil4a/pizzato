@@ -1,0 +1,41 @@
+.catalog-content {
+	margin: rem(20) 0;
+	&__container {
+	}
+
+	&__title {
+	}
+
+	&__items {
+	}
+
+	&__item {
+	}
+
+	&__text {
+	}
+}
+
+.text-catalog {
+	margin-top: rem(25);
+	&__title {
+	}
+
+	&__text {
+		display: flex;
+		gap: rem(20);
+		flex-direction: column;
+		@media (min-width: $mobile) {
+			flex-direction: row;
+			gap: rem(50);
+		}
+		p {
+			font-size: rem(12);
+			line-height: math.div(15, 12);
+			flex-basis: 100%;
+			@media (min-width: $mobile) {
+				flex-basis: 50%;
+			}
+		}
+	}
+}

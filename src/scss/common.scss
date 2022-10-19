@@ -236,6 +236,13 @@
 	}
 }
 
+._creative-title {
+	font-family: $tt;
+	font-weight: 800;
+	font-size: rem(16);
+	line-height: math.div(22, 16);
+}
+
 .anim-logo {
 	z-index: 1;
 	&__spark {

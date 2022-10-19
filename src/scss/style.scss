@@ -141,6 +141,9 @@ body {
 @import 'footer';
 
 // Подключение стилей отдельных страниц
+//Главная
 @import 'home';
 @import 'home-page/home-content';
 @import 'home-page/hero';
+// Каталог
+@import 'catalog-page/catalog-content';
