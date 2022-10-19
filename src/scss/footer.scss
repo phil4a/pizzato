@@ -149,7 +149,7 @@
 		align-items: center;
 		gap: rem(15);
 		@media (min-width: $mobile) {
-			align-items: center;
+			align-items: flex-start;
 		}
 	}
 
