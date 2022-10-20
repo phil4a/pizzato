@@ -83,13 +83,18 @@
 				padding: rem(5) rem(7);
 				border-radius: rem(10);
 				color: #fff;
+				transition: all 0.3s ease 0s;
 			}
 			@media (min-width: $mobile) {
 				justify-content: flex-start;
 			}
 			@media (any-hover: hover) {
 				&:hover {
-					color: $yellowColor;
+					color: $greenColor;
+					&:before {
+						color: $yellowColor;
+						background-color: $greenColor;
+					}
 				}
 			}
 		}
