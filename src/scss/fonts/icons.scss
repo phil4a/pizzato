@@ -14,21 +14,33 @@
 		display: block;
 	}
 }
-._icon-zone:before {
-	content: '\e900';
+._icon-phone:before {
+	content: '\e908';
 }
-._icon-cart:before {
+._icon-edit:before {
 	content: '\e901';
 }
-._icon-close:before {
+._icon-add:before {
 	content: '\e902';
 }
-._icon-cross:before {
+._icon-cart:before {
 	content: '\e903';
 }
-._icon-key:before {
+._icon-close:before {
+	content: '\e909';
+}
+._icon-cross:before {
 	content: '\e904';
 }
-._icon-vk:before {
+._icon-key:before {
 	content: '\e905';
+}
+._icon-vk:before {
+	content: '\e906';
+}
+._icon-zone:before {
+	content: '\e907';
+}
+._icon-location:before {
+	content: '\e947';
 }

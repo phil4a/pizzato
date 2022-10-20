@@ -1,0 +1,162 @@
+.contacts-content {
+	margin: rem(20) 0;
+	&__container {
+	}
+
+	&__title {
+	}
+	&__subtitle {
+		margin-top: rem(30);
+	}
+
+	&__body {
+	}
+
+	&__person {
+		font-size: 10px;
+		line-height: 12px;
+		text-align: center;
+		@media (min-width: $mobile) {
+			text-align: left;
+		}
+	}
+}
+
+.body-contacts {
+	background-color: #fff;
+	display: flex;
+	flex-direction: column;
+	gap: rem(10);
+	@media (min-width: $mobile) {
+		gap: rem(25);
+		flex-direction: row;
+	}
+	&__map {
+		flex: 0 0 auto;
+		min-height: rem(375);
+		@media (min-width: $mobile) {
+			flex: 0 0 50%;
+		}
+	}
+
+	&__info {
+		padding: rem(10) 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		@media (min-width: $mobile) {
+			padding: rem(25) 0;
+			align-items: flex-start;
+		}
+	}
+
+	&__contacts {
+	}
+
+	&__email {
+		font-size: rem(16);
+		margin: rem(18) 0;
+		a {
+			font-weight: 700;
+		}
+	}
+
+	&__form {
+	}
+}
+.contacts-rests {
+	&__item {
+		&:not(:last-child) {
+			margin-bottom: rem(25);
+		}
+		a {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: rem(20);
+			gap: rem(13);
+			color: #333333;
+			transition: color 0.3s ease 0s;
+			&:before {
+				background-color: $redColor;
+				padding: rem(5) rem(7);
+				border-radius: rem(10);
+				color: #fff;
+			}
+			@media (min-width: $mobile) {
+				justify-content: flex-start;
+			}
+			@media (any-hover: hover) {
+				&:hover {
+					color: $yellowColor;
+				}
+			}
+		}
+	}
+
+	&__title {
+		margin-bottom: rem(10);
+		font-family: $tt;
+		font-weight: 800;
+		font-size: rem(20);
+		color: $redColor;
+		text-transform: uppercase;
+	}
+}
+.contacts-form {
+	&__body {
+	}
+
+	&__title {
+		font-size: rem(16);
+		margin-bottom: rem(5);
+	}
+
+	&__item {
+		font-size: rem(16);
+		max-width: rem(380);
+		&:not(:last-child) {
+			margin-bottom: rem(12);
+		}
+	}
+
+	&__input {
+		padding: rem(10) rem(12);
+		font-size: rem(16);
+		width: 100%;
+		border: 2px solid #f04e3e;
+		border-radius: rem(10);
+	}
+	&__textarea {
+		width: 100%;
+		border: 2px solid #f04e3e;
+		padding: rem(10) rem(12);
+		border-radius: rem(10);
+		height: rem(105);
+	}
+
+	&__button {
+		margin-bottom: rem(20);
+	}
+
+	&__checkbox {
+	}
+}
+.checkbox {
+	&__input {
+	}
+
+	&__label {
+	}
+
+	&__text {
+		display: block;
+		font-size: rem(10);
+		max-width: rem(380);
+		text-align: center;
+		@media (min-width: $mobile) {
+			text-align: left;
+		}
+	}
+}
