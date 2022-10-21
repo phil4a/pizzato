@@ -131,6 +131,13 @@ body {
 
 // Подключение базовых стилей, шаблонов (заготовок) и вспомогательных  классов
 // Для подключения/отключения конкретных стилей смотри base.scss
+@import '/node_modules/bootstrap/scss/bootstrap-utilities.scss';
+@import '/node_modules/bootstrap/scss/variables';
+@import '/node_modules/bootstrap/scss/mixins';
+@import '/node_modules/bootstrap/scss/buttons';
+@import '/node_modules/bootstrap/scss/close';
+@import '/node_modules/bootstrap/scss/modal';
+
 @import 'base';
 
 // Подключение стилей общих элементов проекта
@@ -157,3 +164,5 @@ body {
 @import 'offer-page/offer-content';
 //Бонусная программа
 @import 'bonus-page/bonus-content';
+//Вакансии
+@import 'vacancy-page/vacancy-content';

@@ -1,10 +1,57 @@
-<!-- <div id="popup" aria-hidden="true" class="popup">
-	<div class="popup__wrapper">
-		<div class="popup__content">
-			<button data-close type="button" class="popup__close">Закрыть</button>
-			<div class="popup__text">
-				Text
+<div
+	class="modal fade vacancy-modal"
+	id="vacancyModal"
+	tabindex="-1"
+	aria-labelledby="evacancyModalLabel"
+	aria-hidden="true"
+>
+	<div class="modal-dialog modal-dialog-centered vacancy-modal__dialog">
+		<div class="modal-content vacancy-modal__content">
+			<div class="modal-header vacancy-modal__header">
+				<h1
+					class="modal-title fs-5 vacancy-modal__title"
+					id="vacancyModalLabel"
+				>
+					Я хочу работать у вас
+				</h1>
+
+				<button
+					type="button"
+					class="btn-close vacancy-modal__close"
+					data-bs-dismiss="modal"
+					aria-label="Close"
+				></button>
+			</div>
+			<div class="modal-body vacancy-modal__body">
+				<form class="vacancy-modal__form" action="">
+					<div class="vacancy-modal__item">
+						<input
+							autocomplete="off"
+							type="text"
+							data-error="Ошибка"
+							placeholder="Ваше имя"
+							class="vacancy-modal__input"
+						/>
+					</div>
+					<div class="vacancy-modal__item">
+						<input
+							autocomplete="off"
+							type="tel"
+							data-error="Ошибка"
+							placeholder="Телефон"
+							class="vacancy-modal__input"
+						/>
+					</div>
+					<div class="vacancy-modal__item">
+						<input autocomplete="off" type="file" class="vacancy-modal__file" />
+					</div>
+				</form>
+			</div>
+			<div class="modal-footer vacancy-modal__footer">
+				<button type="button" class="vacancy-modal__button button">
+					Отправить
+				</button>
 			</div>
 		</div>
 	</div>
-</div> -->
+</div>

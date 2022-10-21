@@ -1,0 +1,73 @@
+.vacancy-content {
+	&__container {
+	}
+
+	&__vacancies {
+	}
+}
+.vacancies {
+	margin: rem(20) 0;
+	&__title {
+	}
+
+	&__banner {
+		margin: rem(0) rem(-15) rem(35) rem(-15);
+		@media (min-width: $tablet) {
+			margin: rem(0) rem(0) rem(35) rem(0);
+		}
+		img {
+			width: 100%;
+		}
+	}
+
+	&__list {
+		background-color: transparent;
+		row-gap: 50px;
+	}
+
+	&__item {
+	}
+}
+
+.item-vacancy {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	@media (min-width: $tablet) {
+		align-items: flex-start;
+	}
+
+	&__title {
+		font-family: $tt;
+		font-weight: 800;
+		font-size: rem(20);
+		text-transform: uppercase;
+		color: $redColor;
+	}
+
+	&__salary {
+		margin: rem(10) 0;
+		font-weight: 700;
+		font-size: rem(20);
+	}
+
+	&__terms {
+		flex: 1 1 auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: rem(7);
+		margin-bottom: rem(15);
+		font-size: rem(16);
+		text-align: center;
+		@media (min-width: $tablet) {
+			text-align: left;
+			align-items: flex-start;
+		}
+	}
+
+	&__button {
+		margin-top: rem(15);
+		border-radius: rem(10);
+	}
+}
