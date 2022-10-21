@@ -1,0 +1,25 @@
+.bonus {
+	margin: rem(20) 0;
+	&__top-line {
+		// margin-bottom: rem(15);
+	}
+
+	&__title {
+	}
+	&__subtitle {
+		font-weight: 700;
+		font-size: rem(20);
+		color: #333333;
+		margin-bottom: rem(15);
+	}
+
+	&__text {
+		list-style: none;
+		font-size: rem(12);
+		line-height: math.div(15, 12);
+		margin-bottom: rem(30);
+	}
+
+	&__item {
+	}
+}
