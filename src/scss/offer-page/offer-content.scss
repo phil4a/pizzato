@@ -1,0 +1,47 @@
+.offer {
+	margin: rem(20) 0;
+	&__title {
+		margin-bottom: rem(23);
+	}
+
+	&__info {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	&__heading {
+		margin-top: rem(24);
+		margin-bottom: rem(14);
+		font-weight: 600;
+		@include adaptiveValue('font-size', 24, 16);
+		line-height: math.div(29, 24);
+	}
+
+	&__image {
+		max-width: 100%;
+
+		@media (min-width: $tablet) {
+		}
+	}
+
+	&__text {
+		max-width: rem(976);
+		text-align: center;
+		font-size: rem(16);
+		@include adaptiveValue('font-size', 16, 12);
+		line-height: math.div(20, 16);
+		margin-bottom: rem(27);
+	}
+
+	&__button {
+		padding: rem(14) rem(36);
+		border-radius: rem(10);
+		font-size: rem(16);
+		font-weight: 600;
+		line-height: math.div(20, 16);
+		margin-bottom: rem(32);
+		@media (min-width: $tablet) {
+			margin-bottom: rem(57);
+		}
+	}
+}
