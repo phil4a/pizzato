@@ -176,6 +176,9 @@
 			color: rgb(255, 255, 255);
 		}
 	}
+	&_green {
+		background-color: $greenColor;
+	}
 }
 .link-more {
 	position: relative;
