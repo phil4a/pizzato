@@ -1,0 +1,80 @@
+<secton class="account-content">
+	<div class="account-content__container">
+		<div class="account-content__content content-account">
+			<div class="content-account__menu">
+				<a href="#" class="content-account__item button">Профиль</a>
+				<a
+					href="account-orders.html"
+					class="content-account__item button button_green"
+					>История заказов</a
+				>
+				<a href="#" class="content-account__exit-button">Выйти</a>
+			</div>
+			<div class="content-account__data data-account">
+				<div class="data-account__list">
+					<div class="data-account__item">
+						<p class="data-account__option">Имя:</p>
+						<p class="data-account__value">Иван Иванов</p>
+					</div>
+					<div class="data-account__item">
+						<p class="data-account__option">Пол:</p>
+						<p class="data-account__value">Мужской</p>
+					</div>
+					<div class="data-account__item">
+						<p class="data-account__option">Телефон:</p>
+						<p class="data-account__value">+7(999)999-9999</p>
+					</div>
+					<div class="data-account__item">
+						<p class="data-account__option">Дата рождения:</p>
+						<p class="data-account__value">01.01.1996</p>
+					</div>
+				</div>
+				<a
+					href="#"
+					data-popup="#editAccount"
+					class="data-account__button button"
+					>Изменить данные</a
+				>
+			</div>
+			<div class="content-account__bonus-balance bonus-balance">
+				<div class="bonus-balance__title">Количество бонусов:</div>
+				<div class="bonus-balance__value">0</div>
+			</div>
+			<div class="content-account__addresses account-addresses">
+				<h2 class="account-addresses__title">Адреса доставки:</h2>
+				<div class="account-addresses__items">
+					<div class="account-addresses__item item-address">
+						<p class="item-address__address">
+							<span class="item-address__name">Работа:</span> Красный проспект,
+							12, кв. 25, 1 подьезд
+						</p>
+						<a
+							href="#"
+							data-popup="#editAddress"
+							class="item-address__edit _icon-edit"
+						></a>
+						<a href="#" class="item-address__delete _icon-close"></a>
+					</div>
+					<div class="account-addresses__item item-address">
+						<p class="item-address__address">
+							<span class="item-address__name">Дом:</span> Ул. Ленина, 12, кв.
+							25, 1 подьезд
+						</p>
+						<a
+							href="#"
+							data-popup="#editAddress"
+							class="item-address__edit _icon-edit"
+						></a>
+						<a href="#" class="item-address__delete _icon-close"> </a>
+					</div>
+				</div>
+				<a
+					href="#"
+					data-popup="#addAddress"
+					class="account-addresses__add _icon-add"
+				></a>
+				<button class="content-account__save button">Сохранить</button>
+			</div>
+		</div>
+	</div>
+</secton>

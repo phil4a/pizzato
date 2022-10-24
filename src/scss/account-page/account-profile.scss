@@ -1,0 +1,204 @@
+.account-content {
+	&__container {
+	}
+
+	&__content {
+	}
+}
+.content-account {
+	margin: rem(20) auto;
+	max-width: rem(774);
+
+	&__menu {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: rem(10);
+		text-align: center;
+	}
+
+	&__item {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		&_active {
+		}
+	}
+
+	&__exit-button {
+	}
+
+	&__data {
+	}
+
+	&__bonus-balance {
+	}
+
+	&__addresses {
+	}
+
+	&__save {
+	}
+}
+
+.data-account {
+	padding: rem(32) 0;
+	&__list {
+		padding-bottom: rem(20);
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(rem(290), 1fr));
+		@include adaptiveValue('column-gap', 100, 0);
+		row-gap: rem(10);
+	}
+
+	&__item {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__option {
+		flex: 0 0 rem(90);
+		font-size: rem(16);
+	}
+
+	&__value {
+		flex: 0 0 rem(230);
+		flex-grow: 0;
+		flex-shrink: 0;
+		@include adaptiveValue('flex-basis', 260, 200);
+		font-size: rem(16);
+		padding: rem(10) rem(13);
+
+		opacity: 0.6;
+	}
+
+	&__button {
+		align-self: center;
+		padding: rem(10);
+	}
+}
+.bonus-balance {
+	display: flex;
+	gap: rem(5);
+	padding: rem(20) 0;
+	&__title {
+		font-weight: 600;
+		font-size: rem(20);
+	}
+
+	&__value {
+		font-size: rem(20);
+	}
+}
+.account-addresses {
+	padding: rem(20) 0;
+	&__title {
+		font-weight: 600;
+		font-size: rem(16);
+		margin-bottom: rem(10);
+	}
+
+	&__items {
+		display: flex;
+		flex-direction: column;
+		gap: rem(10);
+		margin-bottom: rem(10);
+	}
+
+	&__item {
+		display: flex;
+		justify-content: space-between;
+		gap: rem(5);
+	}
+
+	&__add {
+		margin: 0 auto;
+		display: flex;
+		// padding-left: rem(2);
+		align-items: center;
+		justify-content: center;
+		background-color: $redColor;
+		border-radius: rem(3);
+		height: rem(30);
+		width: rem(30);
+		transition: all 0.3s ease 0s;
+		&::before {
+			color: #fff;
+			font-size: rem(24);
+			transition: all 0.3s ease 0s;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: transparent;
+				&::before {
+					color: $redColor;
+				}
+			}
+		}
+	}
+}
+.item-address {
+	&__address {
+		flex: 1 1 auto;
+		padding: rem(5) rem(10);
+		border: rem(2) solid $redColor;
+		border-radius: rem(10);
+		background-color: #fff;
+		font-size: rem(16);
+		line-height: math.div(22, 16);
+	}
+
+	&__name {
+		font-weight: 600;
+	}
+
+	&__edit {
+		display: flex;
+		flex: 0 0 rem(34);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: #fff;
+		border: rem(2) solid $redColor;
+		border-radius: rem(10);
+		transition: all 0.3s ease 0s;
+		&::before {
+			color: $redColor;
+			font-size: rem(22);
+			transition: all 0.3s ease 0s;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $redColor;
+				&::before {
+					color: #fff;
+				}
+			}
+		}
+	}
+
+	&__delete {
+		flex: 0 0 rem(34);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: $redColor;
+		border-radius: rem(10);
+		transition: all 0.3s ease 0s;
+		&::before {
+			color: #fff;
+			font-size: rem(22);
+			transition: all 0.3s ease 0s;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: transparent;
+				&::before {
+					color: $redColor;
+				}
+			}
+		}
+	}
+}
