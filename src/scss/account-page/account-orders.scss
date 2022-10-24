@@ -1,0 +1,42 @@
+.content-account {
+	max-width: 100%;
+	&__orders {
+		display: flex;
+		justify-content: center;
+	}
+}
+.orders {
+	max-width: 100%;
+	margin-top: rem(35);
+	border-collapse: collapse;
+	@include adaptiveValue('font-size', 16, 12);
+	line-height: math.div(20, 16);
+	color: #1d1d1d93;
+	&__table {
+	}
+
+	&__head {
+		padding: rem(8) rem(12);
+	}
+	tr {
+		&:not(:first-child) {
+			border: rem(1) solid $redColor;
+			background-color: #fff;
+		}
+	}
+	td {
+		padding: rem(8) rem(12);
+	}
+}
+._hidden-mobile {
+	@media (max-width: $tablet) {
+		display: none;
+	}
+}
+._accent {
+	color: $greenColor;
+	font-weight: 800;
+}
+._ready {
+	color: $redColor;
+}
