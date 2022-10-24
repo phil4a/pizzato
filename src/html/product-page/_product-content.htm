@@ -38,8 +38,59 @@
 					</div>
 				</div>
 				<div class="product__modifiers modifiers">
-					<h3 class="modifiers__title">Добавить соус</h3>
-					<img src="@img/product-page/modifiers.jpg" alt="соусы pizzato" />
+					<h3 class="modifiers__title">Выбрать</h3>
+
+					<!-- В зависимости от имеющихся модификаторов подставляется заголовок:
+					для обязательных - Выбрать, для необязательных - Добавить. Если и те и другие - показать оба -->
+
+					<!-- Обязательные модификаторы, если имеются -->
+					<div class="options modifiers-options">
+						<div class="options__item modifier-options__item">
+							<input
+								hidden
+								id="o_1"
+								class="options__input modifier-options__input"
+								checked
+								type="radio"
+								value="1"
+								name="option"
+							/>
+							<label for="o_1" class="options__label modifier-options__label"
+								><span class="options__text modifier-options__text"
+									>Без газа</span
+								></label
+							>
+						</div>
+						<div class="options__item">
+							<input
+								hidden
+								id="o_2"
+								class="options__input modifier-options__input"
+								type="radio"
+								value="2"
+								name="option"
+							/>
+							<label for="o_2" class="options__label modifier-options__label"
+								><span class="options__text modifier-options__text"
+									>С газом</span
+								></label
+							>
+						</div>
+					</div>
+					<!-- Необязательные модификаторы -->
+					<!-- После каждого выбора элементы селекта срабатывает событие selectCallback, его можно отловить в любой части кода -->
+					<h3 class="modifiers__title">Добавить</h3>
+					<select name="form[]" class="modifiers__select">
+						<option data-class="modifiers__option" value="1" selected>
+							Соусы
+						</option>
+						<option data-class="modifiers__option" value="2">
+							Добавки к пицце
+						</option>
+						<option data-class="modifiers__option" value="3">Что-то еще</option>
+						<option data-class="modifiers__option" value="4">И еще</option>
+					</select>
+					<!-- Пример блока выбранных необязательных модификаторов - соусы (меняются в зависимости от выбранного варианта select) -->
 					<ul class="modifiers__list">
 						<li class="modifiers__item modifier">
 							<p class="modifier__name">Барбекю</p>

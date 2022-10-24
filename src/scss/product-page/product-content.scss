@@ -102,7 +102,7 @@
 	}
 
 	&__modifiers {
-		flex: 0 1 auto;
+		flex: 1 1 auto;
 		padding: rem(20) 0;
 		img {
 			display: block;
@@ -124,7 +124,6 @@
 .modifiers {
 	display: flex;
 	flex-direction: column;
-	gap: rem(15);
 
 	&__title {
 		font-family: $tt;
@@ -133,11 +132,21 @@
 		color: $greenColor;
 		margin-bottom: rem(10);
 	}
+	&__select {
+		margin-bottom: rem(10);
+	}
+	&__option {
+		font-family: $fontFamily;
+		color: #000;
+		font-size: rem(16);
+		background: #ffffff;
+	}
 
 	&__list {
 		display: flex;
 		flex-direction: column;
 		gap: rem(10);
+		margin-top: rem(10);
 		@media (max-width: $tablet) {
 			gap: rem(25);
 		}
@@ -145,7 +154,28 @@
 
 	&__item {
 	}
+	&-options {
+		margin-bottom: rem(30);
+	}
 }
+
+.modifier-options {
+	&__item {
+	}
+
+	&__input {
+	}
+
+	&__label {
+		&:after {
+			background-color: $greenColor;
+		}
+	}
+	&__text {
+		font-weight: 600;
+	}
+}
+
 .modifier {
 	display: flex;
 	justify-content: space-between;
