@@ -70,6 +70,7 @@
 	}
 
 	&__info {
+		flex-grow: 1;
 		display: flex;
 		flex-direction: column;
 		height: 100%;
@@ -127,22 +128,48 @@
 
 	&__description {
 		flex: 1 1 auto;
-		margin: rem(15) 0;
+		margin: rem(7) 0;
 		font-size: rem(10);
 		line-height: math.div(12, 10);
 		align-items: flex-end;
 		@media (min-width: $mobileSmall) {
 			font-size: rem(12);
 			line-height: math.div(15, 12);
+			margin: rem(15) 0;
 		}
 	}
 	&__tip {
+	}
+	&__modifiers {
+		margin-bottom: rem(20);
+		@media (max-width: $mobileSmall) {
+			margin-bottom: rem(5);
+			margin-top: rem(5);
+		}
+		.select__content {
+			font-size: rem(14);
+		}
+		.select__option {
+			font-size: rem(14);
+		}
+		@media (max-width: $mobileSmall) {
+			.select__content {
+				font-size: rem(10);
+			}
+			.select__option {
+				font-size: rem(10);
+				padding: rem(10) rem(15);
+			}
+			.select__value {
+			}
+		}
 	}
 
 	&__bot-line {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		margin-top: auto;
 	}
 
 	&__price {
