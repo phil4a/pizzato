@@ -1,0 +1,29 @@
+.order-content {
+	&__container {
+	}
+
+	&__order {
+	}
+}
+.order {
+	margin: rem(20) 0;
+	&__title {
+	}
+
+	&__list {
+		display: grid;
+		gap: rem(25);
+		grid-template-columns: repeat(auto-fill, minmax(rem(290), 1fr));
+		grid-auto-rows: auto;
+
+		@media (min-width: em(999)) {
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: auto;
+		}
+	}
+}
+
+.order-list {
+	&__item {
+	}
+}

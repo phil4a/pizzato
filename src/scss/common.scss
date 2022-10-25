@@ -184,6 +184,195 @@
 	}
 }
 
+.card-sm {
+	display: flex;
+	gap: rem(16.5);
+	background-color: #fff;
+	position: relative;
+
+	&__image {
+		flex: 0 0 50%;
+		img {
+			width: 100%;
+		}
+		@media (min-width: em(999)) {
+			flex: 0 0 25%;
+		}
+	}
+
+	&__info {
+		flex: 1 1 auto;
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+		@media (min-width: em(999)) {
+			flex-direction: row;
+		}
+	}
+	&__text {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap: rem(10);
+		padding: rem(10) rem(30) rem(5) 0;
+		@media (min-width: em(999)) {
+			padding: 0;
+		}
+	}
+	&__title {
+		font-weight: 600;
+		font-size: rem(12);
+		line-height: math.div(18, 16);
+		transition: color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $redColor;
+			}
+		}
+		@media (min-width: em(999)) {
+			font-size: rem(16);
+		}
+	}
+
+	&__modifiers {
+		display: flex;
+		flex-direction: column;
+		gap: rem(5);
+		font-size: rem(12);
+		line-height: math.div(18, 16);
+		@media (min-width: em(999)) {
+			font-size: rem(16);
+		}
+	}
+
+	&__actions {
+		padding-right: rem(20);
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: rem(30);
+	}
+
+	&__quantity {
+		display: flex;
+		gap: rem(7);
+		justify-content: space-between;
+		align-items: center;
+		font-weight: 600;
+		font-size: rem(16);
+		@media (max-width: $tablet) {
+		}
+	}
+
+	&__minus,
+	&__plus {
+		&::before {
+			font-size: rem(10);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+			width: rem(16);
+			height: rem(16);
+			background-color: $redColor;
+			color: #fff;
+			border-radius: 50%;
+			@media (max-width: $tablet) {
+				width: rem(22);
+				height: rem(22);
+			}
+		}
+	}
+
+	&__price {
+		font-weight: 800;
+		font-size: 20px;
+		font-size: rem(12);
+		color: $greenColor;
+		@media (min-width: em(999)) {
+			font-size: rem(20);
+		}
+	}
+
+	&__close {
+		display: flex;
+		position: absolute;
+		font-size: rem(18);
+		color: $redColor;
+		right: rem(10);
+		top: rem(10);
+		transition: color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $yellowColor;
+			}
+		}
+	}
+}
+
+.card-sm-gift {
+	display: flex;
+	background-image: url(@img/order-page/gift-bg.svg);
+	background-size: cover;
+	gap: rem(16.5);
+	position: relative;
+	&__image {
+		flex: 0 0 25%;
+		img {
+			width: 100%;
+		}
+	}
+
+	&__info {
+		flex: 1 1 auto;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__text {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap: rem(10);
+	}
+
+	&__title {
+		font-weight: 600;
+		font-size: rem(16);
+		line-height: math.div(18, 16);
+		color: #fff;
+		transition: color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $yellowColor;
+			}
+		}
+	}
+
+	&__gift {
+		padding-right: rem(40);
+		display: flex;
+		align-items: center;
+		font-family: $tt;
+		font-size: rem(20);
+		color: #ffeda9;
+	}
+
+	&__close {
+		position: absolute;
+		font-size: rem(18);
+		color: #ffeda9;
+		right: rem(10);
+		top: rem(10);
+		transition: color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $greenColor;
+			}
+		}
+	}
+}
+
 .button {
 	padding: rem(8) rem(16);
 	font-weight: 800;
