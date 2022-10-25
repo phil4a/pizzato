@@ -32,157 +32,163 @@
 						<h2>Вес:</h2>
 						<p>410г</p>
 					</div>
-					<div class="product__action">
+					<div data-da=".modifiers, 768" class="product__action">
 						<div class="product__price">399₽</div>
 						<a href="#" class="product__button button">В корзину</a>
 					</div>
 				</div>
 				<div class="product__modifiers modifiers">
-					<h3 class="modifiers__title">Выбрать</h3>
+					<div class="modifiers__required">
+						<h3 class="modifiers__title">Выбрать</h3>
 
-					<!-- В зависимости от имеющихся модификаторов подставляется заголовок:
+						<!-- В зависимости от имеющихся модификаторов подставляется заголовок:
 					для обязательных - Выбрать, для необязательных - Добавить. Если и те и другие - показать оба -->
 
-					<!-- Обязательные модификаторы, если имеются -->
-					<div class="options modifiers-options">
-						<div class="options__item modifier-options__item">
-							<input
-								hidden
-								id="o_1"
-								class="options__input modifier-options__input"
-								checked
-								type="radio"
-								value="1"
-								name="option"
-							/>
-							<label for="o_1" class="options__label modifier-options__label"
-								><span class="options__text modifier-options__text"
-									>Без газа</span
-								></label
-							>
-						</div>
-						<div class="options__item">
-							<input
-								hidden
-								id="o_2"
-								class="options__input modifier-options__input"
-								type="radio"
-								value="2"
-								name="option"
-							/>
-							<label for="o_2" class="options__label modifier-options__label"
-								><span class="options__text modifier-options__text"
-									>С газом</span
-								></label
-							>
+						<!-- Обязательные модификаторы, если имеются -->
+						<div class="options modifiers-options">
+							<div class="options__item modifier-options__item">
+								<input
+									hidden
+									id="o_1"
+									class="options__input modifier-options__input"
+									checked
+									type="radio"
+									value="1"
+									name="option"
+								/>
+								<label for="o_1" class="options__label modifier-options__label"
+									><span class="options__text modifier-options__text"
+										>Без газа</span
+									></label
+								>
+							</div>
+							<div class="options__item">
+								<input
+									hidden
+									id="o_2"
+									class="options__input modifier-options__input"
+									type="radio"
+									value="2"
+									name="option"
+								/>
+								<label for="o_2" class="options__label modifier-options__label"
+									><span class="options__text modifier-options__text"
+										>С газом</span
+									></label
+								>
+							</div>
 						</div>
 					</div>
 					<!-- Необязательные модификаторы -->
 					<!-- После каждого выбора элементы селекта срабатывает событие selectCallback, его можно отловить в любой части кода -->
-					<h3 class="modifiers__title">Добавить</h3>
-					<select name="form[]" class="modifiers__select">
-						<option data-class="modifiers__option" value="1" selected>
-							Соусы
-						</option>
-						<option data-class="modifiers__option" value="2">
-							Добавки к пицце
-						</option>
-						<option data-class="modifiers__option" value="3">Что-то еще</option>
-						<option data-class="modifiers__option" value="4">И еще</option>
-					</select>
-					<!-- Пример блока выбранных необязательных модификаторов - соусы (меняются в зависимости от выбранного варианта select) -->
-					<ul class="modifiers__list">
-						<li class="modifiers__item modifier">
-							<p class="modifier__name">Барбекю</p>
-							<div class="modifier__quantity">
-								<button
-									type="button"
-									class="modifier__minus _icon-minus"
-								></button>
-								0
-								<button
-									type="button"
-									class="modifier__plus _icon-plus"
-								></button>
-							</div>
-							<div class="modifier__price">70₽</div>
-						</li>
-						<li class="modifiers__item modifier">
-							<p class="modifier__name">Кисло-сладкий</p>
-							<div class="modifier__quantity">
-								<button
-									type="button"
-									class="modifier__minus _icon-minus"
-								></button>
-								0
-								<button
-									type="button"
-									class="modifier__plus _icon-plus"
-								></button>
-							</div>
-							<div class="modifier__price">70₽</div>
-						</li>
-						<li class="modifiers__item modifier">
-							<p class="modifier__name">Горчичный</p>
-							<div class="modifier__quantity">
-								<button
-									type="button"
-									class="modifier__minus _icon-minus"
-								></button>
-								0
-								<button
-									type="button"
-									class="modifier__plus _icon-plus"
-								></button>
-							</div>
-							<div class="modifier__price">70₽</div>
-						</li>
-						<li class="modifiers__item modifier">
-							<p class="modifier__name">Томатная сальса</p>
-							<div class="modifier__quantity">
-								<button
-									type="button"
-									class="modifier__minus _icon-minus"
-								></button>
-								0
-								<button
-									type="button"
-									class="modifier__plus _icon-plus"
-								></button>
-							</div>
-							<div class="modifier__price">70₽</div>
-						</li>
-						<li class="modifiers__item modifier">
-							<p class="modifier__name">Чесночный</p>
-							<div class="modifier__quantity">
-								<button
-									type="button"
-									class="modifier__minus _icon-minus"
-								></button>
-								1
-								<button
-									type="button"
-									class="modifier__plus _icon-plus"
-								></button>
-							</div>
-							<div class="modifier__price modifier__price_active">70₽</div>
-						</li>
-						<li class="modifiers__item modifier">
-							<p class="modifier__name">Сырный</p>
-							<div class="modifier__quantity">
-								<button
-									type="button"
-									class="modifier__minus _icon-minus"
-								></button>
-								0
-								<button
-									type="button"
-									class="modifier__plus _icon-plus"
-								></button>
-							</div>
-							<div class="modifier__price">70₽</div>
-						</li>
-					</ul>
+					<div class="modifiers__optional">
+						<h3 class="modifiers__title">Добавить</h3>
+						<select name="form[]" class="modifiers__select">
+							<option data-class="modifiers__option" value="1" selected>
+								Соусы
+							</option>
+							<option data-class="modifiers__option" value="2">
+								Добавки к пицце
+							</option>
+							<option data-class="modifiers__option" value="3">
+								Что-то еще
+							</option>
+							<option data-class="modifiers__option" value="4">И еще</option>
+						</select>
+						<!-- Пример блока выбранных необязательных модификаторов - соусы (меняются в зависимости от выбранного варианта select) -->
+						<ul class="modifiers__list">
+							<li class="modifiers__item modifier">
+								<p class="modifier__name">Барбекю</p>
+								<div class="modifier__quantity">
+									<button
+										type="button"
+										class="modifier__minus _icon-minus"
+									></button>
+									0
+									<button
+										type="button"
+										class="modifier__plus _icon-plus"
+									></button>
+								</div>
+								<div class="modifier__price">70₽</div>
+							</li>
+							<li class="modifiers__item modifier">
+								<p class="modifier__name">Кисло-сладкий</p>
+								<div class="modifier__quantity">
+									<button
+										type="button"
+										class="modifier__minus _icon-minus"
+									></button>
+									0
+									<button
+										type="button"
+										class="modifier__plus _icon-plus"
+									></button>
+								</div>
+								<div class="modifier__price">70₽</div>
+							</li>
+							<li class="modifiers__item modifier">
+								<p class="modifier__name">Горчичный</p>
+								<div class="modifier__quantity">
+									<button
+										type="button"
+										class="modifier__minus _icon-minus"
+									></button>
+									0
+									<button
+										type="button"
+										class="modifier__plus _icon-plus"
+									></button>
+								</div>
+								<div class="modifier__price">70₽</div>
+							</li>
+							<li class="modifiers__item modifier">
+								<p class="modifier__name">Томатная сальса</p>
+								<div class="modifier__quantity">
+									<button
+										type="button"
+										class="modifier__minus _icon-minus"
+									></button>
+									0
+									<button
+										type="button"
+										class="modifier__plus _icon-plus"
+									></button>
+								</div>
+								<div class="modifier__price">70₽</div>
+							</li>
+							<li class="modifiers__item modifier">
+								<p class="modifier__name">Чесночный</p>
+								<div class="modifier__quantity">
+									<button
+										type="button"
+										class="modifier__minus _icon-minus"
+									></button>
+									1
+									<button
+										type="button"
+										class="modifier__plus _icon-plus"
+									></button>
+								</div>
+								<div class="modifier__price modifier__price_active">70₽</div>
+							</li>
+							<li class="modifiers__item modifier">
+								<p class="modifier__name">Сырный</p>
+								<div class="modifier__quantity">
+									<button
+										type="button"
+										class="modifier__minus _icon-minus"
+									></button>
+									0
+									<button
+										type="button"
+										class="modifier__plus _icon-plus"
+									></button>
+								</div>
+								<div class="modifier__price">70₽</div>
+							</li>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</div>
