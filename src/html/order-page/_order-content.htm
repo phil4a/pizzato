@@ -1,101 +1,591 @@
 <secton class="order-content">
 	<div class="order-content__container">
 		<div class="order-content__order order">
-			<h1 class="order__title title">Корзина</h1>
-			<div class="order__list order-list">
-				<div class="order-list__item card-sm">
-					<div class="card-sm__image">
-						<img
-							src="@img/order-page/грибная.jpg"
-							alt="римская грибная пицца"
-						/>
+			<form class="info-order__form" action="#">
+				<h1 class="order__title title">Корзина</h1>
+				<div class="order__list order-list">
+					<div class="order-list__item card-sm">
+						<div class="card-sm__image">
+							<img
+								src="@img/order-page/грибная.jpg"
+								alt="римская грибная пицца"
+							/>
+						</div>
+						<div class="card-sm__info">
+							<div class="card-sm__text">
+								<a href="#" class="card-sm__title"
+									>Пицца с грушей и сыром дор блю</a
+								>
+								<div class="card-sm__modifiers">
+									<p>-с газом</p>
+									<p>+соус барбекю</p>
+								</div>
+							</div>
+							<div class="card-sm__actions">
+								<div class="card-sm__quantity">
+									<button
+										type="button"
+										class="card-sm__minus _icon-minus"
+									></button>
+									1
+									<button
+										type="button"
+										class="card-sm__plus _icon-plus"
+									></button>
+								</div>
+								<div class="card-sm__price">495₽</div>
+							</div>
+						</div>
+
+						<button
+							type="button"
+							title="Удалить из корзины"
+							class="card-sm__close _icon-close"
+						></button>
 					</div>
-					<div class="card-sm__info">
-						<div class="card-sm__text">
-							<a href="#" class="card-sm__title"
-								>Пицца с грушей и сыром дор блю</a
+					<div class="order-list__item card-sm">
+						<div class="card-sm__image">
+							<img
+								src="@img/order-page/грибная.jpg"
+								alt="римская грибная пицца"
+							/>
+						</div>
+						<div class="card-sm__info">
+							<div class="card-sm__text">
+								<a href="#" class="card-sm__title"
+									>Пицца с грушей и сыром дор блю</a
+								>
+								<div class="card-sm__modifiers"></div>
+							</div>
+							<div class="card-sm__actions">
+								<div class="card-sm__quantity">
+									<button
+										type="button"
+										class="card-sm__minus _icon-minus"
+									></button>
+									1
+									<button
+										type="button"
+										class="card-sm__plus _icon-plus"
+									></button>
+								</div>
+
+								<div class="card-sm__price">495₽</div>
+							</div>
+						</div>
+
+						<button
+							type="button"
+							title="Удалить из корзины"
+							class="card-sm__close _icon-close"
+						></button>
+					</div>
+					<div class="order-list__item card-sm-gift">
+						<div class="card-sm-gift__image">
+							<img
+								src="@img/order-page/грибная.jpg"
+								alt="римская грибная пицца"
+							/>
+						</div>
+						<div class="card-sm-gift__info">
+							<div class="card-sm-gift__text">
+								<a href="#" class="card-sm-gift__title">
+									Пицца с грушей и сыром дор блю
+								</a>
+							</div>
+							<div class="card-sm-gift__gift">Подарок</div>
+						</div>
+
+						<button
+							type="button"
+							title="Удалить из корзины"
+							class="card-sm-gift__close _icon-close"
+						></button>
+					</div>
+				</div>
+				<div class="order__suggest suggest-order">
+					<h2 class="suggest-order__subtitle title">Добавить к заказу</h2>
+					<div class="suggest-order__items">
+						<div class="suggest-order__item suggest-order__item_added">
+							<div class="suggest-order__image">
+								<img
+									src="@img/order-page/sauce.jpg"
+									alt="соус барбекю pizzato"
+								/>
+							</div>
+							<div class="suggest-order__info">
+								<a href="#" class="suggest-order__title">Соус Барбекю</a>
+								<div class="suggest-order__actions">
+									<div class="suggest-order__quantity">
+										<button
+											type="button"
+											class="card-sm__minus _icon-minus"
+										></button>
+										1
+										<button
+											type="button"
+											class="card-sm__plus _icon-plus"
+										></button>
+									</div>
+									<div class="suggest-order__price">70₽</div>
+								</div>
+							</div>
+						</div>
+						<div class="suggest-order__item">
+							<div class="suggest-order__image">
+								<img
+									src="@img/order-page/sauce.jpg"
+									alt="соус барбекю pizzato"
+								/>
+							</div>
+							<div class="suggest-order__info">
+								<a href="#" class="suggest-order__title">Соус Кисло-сладкий</a>
+								<div class="suggest-order__actions">
+									<div class="suggest-order__quantity">
+										<button
+											type="button"
+											class="card-sm__minus _icon-minus"
+										></button>
+										0
+										<button
+											type="button"
+											class="card-sm__plus _icon-plus"
+										></button>
+									</div>
+									<div class="suggest-order__price">70₽</div>
+								</div>
+							</div>
+						</div>
+						<div class="suggest-order__item">
+							<div class="suggest-order__image">
+								<img
+									src="@img/order-page/sauce.jpg"
+									alt="соус барбекю pizzato"
+								/>
+							</div>
+							<div class="suggest-order__info">
+								<a href="#" class="suggest-order__title">Соус Горчичный</a>
+								<div class="suggest-order__actions">
+									<div class="suggest-order__quantity">
+										<button
+											type="button"
+											class="card-sm__minus _icon-minus"
+										></button>
+										0
+										<button
+											type="button"
+											class="card-sm__plus _icon-plus"
+										></button>
+									</div>
+									<div class="suggest-order__price">70₽</div>
+								</div>
+							</div>
+						</div>
+						<div class="suggest-order__item">
+							<div class="suggest-order__image">
+								<img
+									src="@img/order-page/sauce.jpg"
+									alt="соус барбекю pizzato"
+								/>
+							</div>
+							<div class="suggest-order__info">
+								<a href="#" class="suggest-order__title"
+									>Соус Томатный сальса</a
+								>
+								<div class="suggest-order__actions">
+									<div class="suggest-order__quantity">
+										<button
+											type="button"
+											class="card-sm__minus _icon-minus"
+										></button>
+										0
+										<button
+											type="button"
+											class="card-sm__plus _icon-plus"
+										></button>
+									</div>
+									<div class="suggest-order__price">70₽</div>
+								</div>
+							</div>
+						</div>
+						<div class="suggest-order__item">
+							<div class="suggest-order__image">
+								<img
+									src="@img/order-page/sauce.jpg"
+									alt="соус барбекю pizzato"
+								/>
+							</div>
+							<div class="suggest-order__info">
+								<a href="#" class="suggest-order__title">Соус Чесночный</a>
+								<div class="suggest-order__actions">
+									<div class="suggest-order__quantity">
+										<button
+											type="button"
+											class="card-sm__minus _icon-minus"
+										></button>
+										0
+										<button
+											type="button"
+											class="card-sm__plus _icon-plus"
+										></button>
+									</div>
+									<div class="suggest-order__price">70₽</div>
+								</div>
+							</div>
+						</div>
+						<div class="suggest-order__item">
+							<div class="suggest-order__image">
+								<img
+									src="@img/order-page/sauce.jpg"
+									alt="соус барбекю pizzato"
+								/>
+							</div>
+							<div class="suggest-order__info">
+								<a href="#" class="suggest-order__title">Соус Сырный</a>
+								<div class="suggest-order__actions">
+									<div class="suggest-order__quantity">
+										<button
+											type="button"
+											class="card-sm__minus _icon-minus"
+										></button>
+										0
+										<button
+											type="button"
+											class="card-sm__plus _icon-plus"
+										></button>
+									</div>
+									<div class="suggest-order__price">70₽</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="order__promo promo-order">
+					<h2 class="promo-order__title title">Промокод</h2>
+					<div class="promo-order__forms">
+						<div class="promo-order__promo promo">
+							<div class="promo__form">
+								<input
+									autocomplete="off"
+									type="text"
+									name="form[]"
+									data-error="Ошибка"
+									placeholder="Введите промокод"
+									class="promo__input input-red"
+								/>
+
+								<button type="submit" class="promo__button button">
+									Применить
+								</button>
+							</div>
+							<p class="promo__response promo__response_false">
+								Акция не применена. Попробуйте другой промокод
+							</p>
+						</div>
+						<div class="promo-order__balance balance-promo">
+							<div class="balance-promo__balance">
+								У вас есть <span>225</span> бонусных баллов.
+							</div>
+							<div class="balance-promo__form">
+								<input
+									autocomplete="off"
+									type="text"
+									name="form[]"
+									data-error="Ошибка"
+									placeholder="Введите количество"
+									class="balance-promo__input input-red"
+								/>
+								<button type="submit" class="balance-promo__button button">
+									Списать
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="order__total total">
+					<h2 class="total__title title">
+						Сумма заказа <span class="total__price"> 2276руб</span>
+					</h2>
+				</div>
+				<div class="order__info info-order">
+					<h2 class="info-order__title title">Оформление заказа</h2>
+					<div class="info-order__person">
+						<div class="info-order__name">
+							<label for="order-form__name">Имя</label>
+							<input
+								autocomplete="off"
+								type="text"
+								name="order-form__name"
+								data-error="Ошибка"
+								placeholder="Введите имя"
+								class="input-order__input input-red"
+							/>
+						</div>
+						<div class="info-order__phone">
+							<label for="order-form__phone">Телефон</label>
+							<input
+								autocomplete="off"
+								type="tel"
+								name="order-form__phone"
+								data-error="Ошибка"
+								placeholder="Введите телефон"
+								class="input-order__input input-red"
+							/>
+						</div>
+					</div>
+					<div class="info-order__selects">
+						<div class="info-order__shipment shipment-info">
+							<div class="shipment-info__title">Тип заказа</div>
+							<div class="shipment-info__options">
+								<div class="options__item">
+									<input
+										hidden
+										id="shipment_1"
+										class="options__input"
+										checked
+										type="radio"
+										value="1"
+										name="shipment-info"
+									/>
+									<label for="shipment_1" class="options__label"
+										><span class="options__text">Доставка</span></label
+									>
+								</div>
+								<div class="options__item">
+									<input
+										hidden
+										id="shipment_2"
+										class="options__input"
+										type="radio"
+										value="2"
+										name="shipment-info"
+									/>
+									<label for="shipment_2" class="options__label"
+										><span class="options__text">Самовывоз</span></label
+									>
+								</div>
+							</div>
+						</div>
+						<div class="info-order__payment payment-info">
+							<div class="payment-info__title">Оплата</div>
+							<div class="payment-info__options">
+								<div class="options__item">
+									<input
+										hidden
+										id="payment_1"
+										class="options__input"
+										checked
+										type="radio"
+										value="1"
+										name="payment-info"
+									/>
+									<label for="payment_1" class="options__label"
+										><span class="options__text">Картой курьеру</span></label
+									>
+								</div>
+								<div class="options__item">
+									<input
+										hidden
+										id="payment_2"
+										class="options__input"
+										type="radio"
+										value="2"
+										name="payment-info"
+									/>
+									<label for="payment_2" class="options__label"
+										><span class="options__text">Наличными курьеру</span></label
+									>
+								</div>
+								<div class="options__item">
+									<input
+										hidden
+										id="payment_3"
+										class="options__input"
+										type="radio"
+										value="2"
+										name="payment-info"
+									/>
+									<label for="payment_3" class="options__label"
+										><span class="options__text">На сайте</span></label
+									>
+								</div>
+							</div>
+						</div>
+						<div class="info-order__time time-info">
+							<div class="time-info__title">Оплата</div>
+							<div class="time-info__options">
+								<div class="options__item">
+									<input
+										hidden
+										id="time_1"
+										class="options__input"
+										checked
+										type="radio"
+										value="1"
+										name="time-info"
+									/>
+									<label for="time_1" class="options__label"
+										><span class="options__text">В ближайшее время</span></label
+									>
+								</div>
+								<div class="options__item">
+									<input
+										hidden
+										id="time_2"
+										class="options__input"
+										type="radio"
+										value="2"
+										name="time-info"
+									/>
+									<label for="time_2" class="options__label"
+										><span class="options__text">Ко времени</span></label
+									>
+								</div>
+							</div>
+						</div>
+						<div class="info-order__address address-info">
+							<div class="address-info__title">Адрес доставки</div>
+							<div class="address-info__options">
+								<div class="options__item">
+									<input
+										hidden
+										id="address_1"
+										class="options__input"
+										checked
+										type="radio"
+										value="1"
+										name="address-info"
+									/>
+									<label for="address_1" class="options__label"
+										><span class="options__text">Дом</span></label
+									>
+								</div>
+								<div class="options__item">
+									<input
+										hidden
+										id="address_2"
+										class="options__input"
+										type="radio"
+										value="2"
+										name="address-info"
+									/>
+									<label for="address_2" class="options__label"
+										><span class="options__text">Работа</span></label
+									>
+								</div>
+								<div class="options__item">
+									<input
+										hidden
+										id="address_3"
+										class="options__input"
+										type="radio"
+										value="2"
+										name="address-info"
+									/>
+									<label for="address_3" class="options__label"
+										><span class="options__text">Другой адрес</span></label
+									>
+								</div>
+							</div>
+						</div>
+						<div class="info-order__adding address-adding">
+							<div class="address-adding__city">
+								<label for="input__city">Город</label>
+								<input
+									autocomplete="off"
+									type="text"
+									name="input__city"
+									data-error="Ошибка"
+									placeholder="Введите город"
+									class="input__city input-red"
+								/>
+							</div>
+							<div class="address-adding__street">
+								<label for="input__street">Улица</label>
+								<input
+									autocomplete="off"
+									type="text"
+									name="input__street"
+									data-error="Ошибка"
+									placeholder="Введите улицу"
+									class="input__city input-red"
+								/>
+							</div>
+							<div class="address-adding__house">
+								<label for="input__house">Дом</label>
+								<input
+									autocomplete="off"
+									type="text"
+									name="input__house"
+									data-error="Ошибка"
+									placeholder=""
+									class="input__house input-sm input-red input-red_invalid"
+								/>
+							</div>
+							<div class="address-adding__flat">
+								<label for="input__flat">Квартира</label>
+								<input
+									autocomplete="off"
+									type="text"
+									name="input__flat"
+									data-error="Ошибка"
+									placeholder=""
+									class="input__flat input-sm input-red"
+								/>
+							</div>
+							<div class="address-adding__entrance">
+								<label for="input__entrance">Подъезд</label>
+								<input
+									autocomplete="off"
+									type="text"
+									name="input__entrance"
+									data-error="Ошибка"
+									placeholder=""
+									class="input__entrance input-sm input-red"
+								/>
+							</div>
+							<div class="address-adding__floor">
+								<label for="input__floor">Этаж</label>
+								<input
+									autocomplete="off"
+									type="text"
+									name="input__floor"
+									data-error="Ошибка"
+									placeholder=""
+									class="input__floor input-sm input-red"
+								/>
+							</div>
+						</div>
+						<div class="address-adding__save">
+							<input
+								id="save-address"
+								data-error="Ошибка"
+								class="address-adding__input"
+								type="checkbox"
+								value="1"
+								name="save-address"
+							/>
+							<label for="save-address" class="address-adding__label"
+								><span class="address-adding__text"
+									>Сохранить адрес</span
+								></label
 							>
-							<div class="card-sm__modifiers">
-								<p>-с газом</p>
-								<p>+соус барбекю</p>
-							</div>
-						</div>
-						<div class="card-sm__actions">
-							<div class="card-sm__quantity">
-								<button
-									type="button"
-									class="card-sm__minus _icon-minus"
-								></button>
-								1
-								<button type="button" class="card-sm__plus _icon-plus"></button>
-							</div>
-							<div class="card-sm__price">495₽</div>
 						</div>
 					</div>
-
-					<button
-						type="button"
-						title="Удалить из корзины"
-						class="card-sm__close _icon-close"
-					></button>
 				</div>
-				<div class="order-list__item card-sm">
-					<div class="card-sm__image">
-						<img
-							src="@img/order-page/грибная.jpg"
-							alt="римская грибная пицца"
-						/>
-					</div>
-					<div class="card-sm__info">
-						<div class="card-sm__text">
-							<a href="#" class="card-sm__title"
-								>Пицца с грушей и сыром дор блю</a
-							>
-							<div class="card-sm__modifiers"></div>
-						</div>
-						<div class="card-sm__actions">
-							<div class="card-sm__quantity">
-								<button
-									type="button"
-									class="card-sm__minus _icon-minus"
-								></button>
-								1
-								<button type="button" class="card-sm__plus _icon-plus"></button>
-							</div>
-
-							<div class="card-sm__price">495₽</div>
-						</div>
-					</div>
-
-					<button
-						type="button"
-						title="Удалить из корзины"
-						class="card-sm__close _icon-close"
-					></button>
+				<div class="order__textarea">
+					<p>Комментарий</p>
+					<textarea
+						autocomplete="off"
+						name="order-textarea"
+						placeholder="Введите сообщение"
+						data-error="Ошибка"
+						class="input"
+					></textarea>
 				</div>
-				<div class="order-list__item card-sm-gift">
-					<div class="card-sm-gift__image">
-						<img
-							src="@img/order-page/грибная.jpg"
-							alt="римская грибная пицца"
-						/>
-					</div>
-					<div class="card-sm-gift__info">
-						<div class="card-sm-gift__text">
-							<a href="#" class="card-sm-gift__title">
-								Пицца с грушей и сыром дор блю
-							</a>
-						</div>
-						<div class="card-sm-gift__gift">Подарок</div>
-					</div>
-
-					<button
-						type="button"
-						title="Удалить из корзины"
-						class="card-sm-gift__close _icon-close"
-					></button>
-				</div>
-			</div>
+			</form>
+			<button type="submit" class="button order__button">Оформить заказ</button>
+			<p>Введите номер дома</p>
 		</div>
 	</div>
 </secton>
