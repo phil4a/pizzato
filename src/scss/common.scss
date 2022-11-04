@@ -16,6 +16,10 @@
 		line-height: math.div(34, 24);
 	}
 }
+._active {
+	color: $redColor;
+}
+
 ._catalog-grid {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(rem(290), 1fr));

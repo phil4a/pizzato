@@ -1,0 +1,35 @@
+.policy-content {
+	&__container {
+	}
+
+	&__policy {
+	}
+}
+.policy {
+	margin: rem(30) 0;
+	&__top-line {
+	}
+
+	&__title {
+	}
+
+	&__info {
+		font-size: rem(12);
+		line-height: math.div(14, 10);
+		color: #333;
+	}
+
+	&__text {
+		font-size: rem(12);
+		line-height: math.div(14, 10);
+		color: #333;
+	}
+
+	&__item {
+		list-style: none;
+
+		&:not(:last-child) {
+			margin-bottom: rem(15);
+		}
+	}
+}

@@ -366,6 +366,54 @@
 								</div>
 							</div>
 						</div>
+						<div class="info-order__pickup pickup-info">
+							<div class="pickup-info__title">Точка самовывоза:</div>
+							<div class="pickup-info__options">
+								<div class="options__item">
+									<input
+										hidden
+										id="pickup_1"
+										class="options__input"
+										checked
+										type="radio"
+										value="1"
+										name="pickup-info"
+									/>
+									<label for="pickup_1" class="options__label"
+										><span class="options__text"
+											>Академгородок, Иванова, 35Б</span
+										></label
+									>
+								</div>
+								<div class="options__item">
+									<input
+										hidden
+										id="pickup_2"
+										class="options__input"
+										type="radio"
+										value="2"
+										name="pickup-info"
+									/>
+									<label for="pickup_2" class="options__label"
+										><span class="options__text">Мичурина, 12</span></label
+									>
+								</div>
+								<div class="options__item">
+									<input
+										hidden
+										id="pickup_3"
+										class="options__input"
+										type="radio"
+										value="2"
+										name="pickup-info"
+									/>
+									<label for="pickup_3" class="options__label"
+										><span class="options__text">Фрунзе, 238</span></label
+									>
+								</div>
+							</div>
+						</div>
+
 						<div class="info-order__payment payment-info">
 							<div class="payment-info__title">Оплата</div>
 							<div class="payment-info__options">
@@ -412,7 +460,7 @@
 							</div>
 						</div>
 						<div class="info-order__time time-info">
-							<div class="time-info__title">Оплата</div>
+							<div class="time-info__title">Время доставки</div>
 							<div class="time-info__options">
 								<div class="options__item">
 									<input
@@ -520,6 +568,17 @@
 									data-error="Ошибка"
 									placeholder=""
 									class="input__house input-sm input-red input-red_invalid"
+								/>
+							</div>
+							<div class="address-adding__building">
+								<label for="input__building">Корпус</label>
+								<input
+									autocomplete="off"
+									type="text"
+									name="input__building"
+									data-error="Ошибка"
+									placeholder=""
+									class="input__building input-sm input-red"
 								/>
 							</div>
 							<div class="address-adding__flat">

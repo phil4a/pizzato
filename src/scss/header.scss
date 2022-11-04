@@ -136,13 +136,6 @@
 				top: rem(-2);
 				font-size: rem(12);
 			}
-			.cabinet__el1,
-			.cabinet__el2,
-			.cart__el1,
-			.cart__el2,
-			.cart__el3 {
-				display: none;
-			}
 		}
 	}
 	&._header-show {
@@ -448,10 +441,10 @@
 		line-height: math.div(17, 14);
 		font-family: 'Montserrat';
 		text-transform: uppercase;
+		color: $greenColor;
 	}
 
 	&__link {
-		color: $greenColor;
 		transition: color 0.3s ease 0s;
 		@media (any-hover: hover) {
 			&:hover {

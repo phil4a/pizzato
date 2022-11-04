@@ -1,0 +1,17 @@
+.empty-cart-content {
+	&__container {
+	}
+
+	&__empty-cart {
+	}
+}
+.empty-cart {
+	margin: rem(30) 0;
+	min-height: rem(500);
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	p {
+		font-size: rem(24);
+	}
+}

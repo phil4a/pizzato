@@ -361,6 +361,15 @@
 		font-size: rem(14);
 	}
 }
+.pickup-info {
+	&__title {
+		margin-bottom: rem(10);
+	}
+
+	&__options {
+		font-size: rem(14);
+	}
+}
 
 .payment-info {
 	&__title {
@@ -441,7 +450,16 @@
 			gap: rem(10);
 		}
 	}
-
+	&__building {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: rem(5);
+		@media (min-width: $mobile) {
+			flex-direction: row;
+			gap: rem(10);
+		}
+	}
 	&__flat {
 		display: flex;
 		flex-direction: column;

@@ -176,3 +176,13 @@ body {
 @import 'account-page/account-orders';
 //Страница личный кабинет - заказы
 @import 'order-page/order-content';
+//Страница политика конфиденциальности
+@import 'policy-page/policy-content';
+//Страница пользовательское соглашение
+@import 'terms-page/terms-content';
+//Страница правила доставки
+@import 'delivery-rules-page/delivery-rules-content';
+//Страница успешного оформления заказа
+@import 'success-page/success-content';
+//Страница пустой корзины
+@import 'empty-cart-page/empty-cart-content';
