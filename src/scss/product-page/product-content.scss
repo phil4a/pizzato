@@ -94,9 +94,14 @@
 	}
 
 	&__price {
+		display: flex;
+		align-items: flex-end;
 		font-weight: 800;
 		font-size: rem(20);
 		color: $greenColor;
+		&_red {
+			color: $redColor;
+		}
 	}
 
 	&__button {
