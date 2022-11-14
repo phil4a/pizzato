@@ -291,7 +291,7 @@
 	&__modifiers {
 		display: flex;
 		flex-direction: column;
-		gap: 0;
+		gap: rem(5);
 		font-size: rem(12);
 		line-height: math.div(18, 16);
 		@media (min-width: em(999)) {
