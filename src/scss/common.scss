@@ -24,9 +24,9 @@
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(rem(290), 1fr));
 	grid-auto-rows: auto;
-	gap: 0;
+	// gap: rem(25);
 	justify-content: space-between;
-	background-color: #fff;
+	// background-color: #fff;
 	margin-bottom: rem(15);
 	@media (min-width: $mobileSmall) {
 		background-color: transparent;
@@ -35,7 +35,7 @@
 }
 .card {
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	background-color: #fff;
 	margin: rem(14) 0;
 	@media (min-width: $mobileSmall) {
@@ -45,7 +45,7 @@
 	}
 	&__image {
 		position: relative;
-		flex: 0 0 50%;
+		// flex: 0 0 50%;
 		@media (min-width: $mobileSmall) {
 			flex: 0 1 auto;
 			@media (any-hover: hover) {
@@ -78,7 +78,7 @@
 		display: flex;
 		flex-direction: column;
 		height: 100%;
-		padding: rem(5) rem(5) 0 rem(6);
+		padding: rem(32) rem(20) rem(20) rem(22);
 		@media (min-width: $mobileSmall) {
 			padding: rem(32) rem(20) rem(20) rem(22);
 		}
@@ -93,10 +93,10 @@
 
 	&__title {
 		font-weight: 600;
-		font-size: rem(12);
+		// font-size: rem(12);
+		font-size: rem(16);
 		transition: all 0.3s ease 0s;
 		@media (min-width: $mobileSmall) {
-			font-size: rem(16);
 		}
 		@media (any-hover: hover) {
 			&:hover {
@@ -133,13 +133,13 @@
 	&__description {
 		flex: 1 1 auto;
 		margin: rem(7) 0;
-		font-size: rem(10);
+		font-size: rem(12);
 		line-height: math.div(12, 10);
 		align-items: flex-end;
+		margin: rem(15) 0;
 		@media (min-width: $mobileSmall) {
-			font-size: rem(12);
-			line-height: math.div(15, 12);
-			margin: rem(15) 0;
+			// line-height: math.div(15, 12);
+			// margin: rem(15) 0;
 		}
 	}
 	&__tip {
@@ -157,15 +157,15 @@
 			font-size: rem(14);
 		}
 		@media (max-width: $mobileSmall) {
-			.select__content {
-				font-size: rem(10);
-			}
-			.select__option {
-				font-size: rem(10);
-				padding: rem(10) rem(15);
-			}
-			.select__value {
-			}
+			// .select__content {
+			// 	font-size: rem(10);
+			// }
+			// .select__option {
+			// 	font-size: rem(10);
+			// 	padding: rem(10) rem(15);
+			// }
+			// .select__value {
+			// }
 		}
 	}
 
@@ -180,10 +180,10 @@
 		display: flex;
 		align-items: flex-end;
 		font-weight: 800;
-		font-size: rem(12);
+		font-size: rem(20);
 		color: $greenColor;
 		@media (min-width: $mobileSmall) {
-			font-size: rem(20);
+			// font-size: rem(20);
 		}
 		&_red {
 			color: $redColor;
@@ -191,6 +191,8 @@
 	}
 
 	&__button {
+		padding: rem(12) rem(22) !important;
+		font-size: rem(16) !important;
 	}
 }
 .old-price {
@@ -198,7 +200,7 @@
 	position: relative;
 	color: $greenColor;
 	margin-left: rem(5);
-	font-size: rem(9);
+	font-size: rem(16);
 
 	@media (min-width: $mobileSmall) {
 		font-size: rem(14);
@@ -209,7 +211,7 @@
 		margin-left: -5%;
 		width: 110%;
 		height: 50%;
-		border-bottom: 1px solid $greenColor;
+		border-bottom: 2px solid $greenColor;
 		transform: rotate(-10deg);
 		@media (min-width: $mobileSmall) {
 			border-bottom: 2px solid $greenColor;
@@ -224,7 +226,7 @@
 		&::before {
 			width: 93%;
 			margin-left: -5%;
-			border-bottom: 1px solid $greenColor;
+			border-bottom: 2px solid $greenColor;
 			@media (min-width: em(999)) {
 				width: 80%;
 				margin-left: -7%;
