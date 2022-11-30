@@ -311,6 +311,7 @@
 	align-items: center;
 	bottom: rem(20);
 	right: rem(20);
+
 	@media (any-hover: hover) {
 		&:hover {
 			.cart__el1 {
@@ -334,26 +335,24 @@
 		display: flex;
 		position: relative;
 		justify-content: center;
-		width: rem(45);
-		height: rem(45);
+		width: rem(56);
+		height: rem(56);
 		background-size: cover;
 		background-image: url(@img/cart-mobile-bg.svg);
-		box-shadow: 0px 0px 15px 5px #fdc20053;
+		box-shadow: 0px 0px 10px 10px rgba(255, 255, 255, 0.5);
 		border-radius: 50%;
 		transition: all 0.3s ease 0s;
 		@media (min-width: $tablet) {
 			box-shadow: none;
-			width: rem(56);
-			height: rem(56);
+
 			background-image: url(@img/actions-bg.svg);
 		}
 		&:before {
 			align-self: center;
 			color: #fff;
-			font-size: rem(23);
+			font-size: rem(33);
 			transition: color 0.3s ease 0s;
 			@media (min-width: $tablet) {
-				font-size: rem(33);
 			}
 		}
 		@media (any-hover: hover) {
